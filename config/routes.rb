@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
+  devise_scope :user do
+  root :to => 'devise/sessions#new'
+end
   devise_for :users
-  root "pages#main"
+  get "main" => "pages#main"
   get "profile" => "pages#profile"
   get "projects" => "pages#projects"
   get "project_docs" => "pages#project_docs"

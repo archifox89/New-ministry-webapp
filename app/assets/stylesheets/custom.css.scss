@@ -20,7 +20,7 @@
 }
 
 
- .pages, .subpages {
+ .pages, .subpages, .sessions, .registrations {
  		margin-left: auto;
  		margin-right: auto;
  		width: 1250px;
@@ -68,5 +68,9 @@
 
 .label-warning {
   float: right;
+}
+
+.checkbox input[type="checkbox"] {
+	margin-left: 0px;
 }
 
