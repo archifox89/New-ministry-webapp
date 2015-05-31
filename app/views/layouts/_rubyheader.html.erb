@@ -1,0 +1,16 @@
+<%= navbar do %>
+  <%= horizontal do %>
+    <%= nav class: 'navbar-center' do %>
+    	<%= link_to 'Main', root_path %>
+      <%= link_to "Vacations", vacations_path %>
+      <%= link_to "Projects", projects_path %>
+      <%= link_to "Projects Documents", project_docs_path %>
+      <%= link_to "Search", search_path %>
+      <%= link_to "Reports", reports_path %>
+      <%= link_to "Feedback", feedback_path %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+

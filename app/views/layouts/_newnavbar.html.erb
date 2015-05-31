@@ -1,0 +1,62 @@
+<nav>
+		<ul>
+			 <li><%= link_to root_path do %>
+				 	<i class="fa fa-home"></i>Main
+				<% end %>
+			</li>
+			 <li><%= link_to profile_path do %>
+					<i class="fa fa-user"></i>Employee Profile<i class="fa fa-sort-desc"></i>
+				<% end %>
+			 		<ul>
+			 			<li><%= link_to "Tasks / Activities", tasks_path %></li>
+			 			<li><%= link_to "Vacations", vacations_path %></li>
+			 		</ul>
+			 </li>
+			 <li><%= link_to projects_path do %>
+			 		<i class="fa fa-building-o"></i>Projects<i class="fa fa-sort-desc"></i>
+			 		<% end %>
+			 	<ul>
+		 			<li><%= link_to active_path do %>Active Projects<i class="fa fa-caret-right"></i>
+		 				<% end %>
+			 			<ul>
+				 			<li><%= link_to "Preliminary Stage", presignature_path %></li>
+				 			<li><%= link_to "Design Stage", develop_path %></li>
+				 			<li><%= link_to "Tendered Stage", proposed_path %></li>
+				 		</ul>
+		 			</li>
+		 			<li><%= link_to "Archive", archive_path %></li>
+		 		</ul>
+			 </li>
+		   <li><%= link_to project_docs_path do %>
+		   	<i class="fa fa-folder-open"></i>Project Documents<i class="fa fa-sort-desc"></i>
+		   	<% end %>
+			 	<ul>
+		 			<li><%= link_to "Preliminary Stage", presignature2_path %></li>
+		 			<li><%= link_to development2_path do %>Design Stage<i class="fa fa-caret-right"></i>
+		 				<% end %>
+		 				<ul>
+				 			<li><%= link_to "Phase 1", phase1_path %></li>
+				 			<li><%= link_to "Phase 2", phase2_path %></li>
+				 			<li><%= link_to "Phase 3", phase3_path %></li>
+				 			<li><%= link_to "Phase 4", phase4_path %></li>
+				 		</ul>
+		 			</li>
+		 			<li><%= link_to "Tendered Projects", proposed2_path %></li>
+		 		</ul>
+		   </li>
+		   <li><%= link_to search_path do %>
+		   	<i class="fa fa-search"></i>Search
+		   	<% end %>
+		   </li>
+		   <li><%= link_to reports_path do %>
+		   	<i class="fa fa-file-text-o"></i>Reports
+		   	<% end %>
+		   </li>
+		   <li><%= link_to feedback_path do %>
+		   	<i class="fa fa-comment-o"></i>Feedback
+		   	<% end %>
+		   </li>
+		</ul>
+</nav>
+
+
