@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
   def main
   end
-
-  def profile
-  end
-
+  
   def projects
   end
 

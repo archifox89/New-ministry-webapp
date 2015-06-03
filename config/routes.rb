@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
   
   
+  resources :profiles
+
   devise_for :users
+  devise_scope :user do
+   root :to => 'devise/sessions#new'
+end
   get "main" => "pages#main"
-  get "profile" => "pages#profile"
   get "projects" => "pages#projects"
   get "project_docs" => "pages#project_docs"
   get "search" => "pages#search"
   get "reports" => "pages#reports"
   get "feedback" => "pages#feedback"
 
-  devise_scope :user do
-  root :to => 'devise/sessions#new'
-end
+ 
 
   get "tasks" => "subpages#tasks"
   get "vacations" => "subpages#vacations"
