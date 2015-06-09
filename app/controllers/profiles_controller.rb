@@ -1,5 +1,4 @@
 class ProfilesController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -10,7 +9,6 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @profile = Profile.find(params[:id])
     respond_with(@profile)
   end
 
@@ -45,6 +43,6 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(:name, :civil, :email, :level, :employment_date, :mobile, :folder, :title, :internal, :nationality, :vacation, :work_email, :experience)
+      params[:profile]
     end
 end
