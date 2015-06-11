@@ -5,10 +5,16 @@
   	<%= f.input :name, label: 'Full Name:' %>
   	<%= f.input :civil, label: 'Civil ID:' %>
   	<%= f.input :date_of_employment, label: 'Date of Employement:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
+    <%= f.input :mobile, label: 'Mobile no:' %>
+    <%= f.input :work_email, label: 'Work Email:' %>
+    <%= f.input :personal_email, label: 'Personal Email:' %>
+    <%= f.input :internal_no, label: 'Internal no:' %>
+
+  </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
 
-  </div>
+
   </div>
 <% end %>

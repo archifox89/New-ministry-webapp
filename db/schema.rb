@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609100200) do
+ActiveRecord::Schema.define(version: 20150611080522) do
 
   create_table "profiles", force: true do |t|
     t.datetime "created_at"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 20150609100200) do
     t.string   "name"
     t.string   "civil"
     t.date     "date_of_employment"
+    t.string   "mobile"
+    t.string   "work_email"
+    t.string   "personal_email"
+    t.string   "internal_no"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
