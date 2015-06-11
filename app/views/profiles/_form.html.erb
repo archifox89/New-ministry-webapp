@@ -2,9 +2,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  </div>
+  	<%= f.input :name, label: 'Full Name:' %>
+  	<%= f.input :civil, label: 'Civil ID:' %>
+  	<%= f.input :date_of_employment, label: 'Date of Employement:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
 
   <div class="form-actions">
     <%= f.button :submit %>
+
+  </div>
   </div>
 <% end %>

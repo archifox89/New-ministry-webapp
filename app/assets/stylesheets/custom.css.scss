@@ -39,6 +39,17 @@
 	  	font-size: 1.7em;
 	  }
 
+.edit h3  {
+			margin-top: 30px;
+	  	text-align: center;
+	  	font-size: 1.7em;
+	  }
+
+.new h3  {
+			margin-top: 30px;
+	  	text-align: center;
+	  	font-size: 1.7em;
+	  }
 
 
 .nav {
@@ -74,3 +85,50 @@
 	margin-left: 0px;
 }
 
+.sessions .form-control {
+
+width: 100%;
+
+}
+
+
+
+.sessions .panel {
+
+	margin-top: 50px;
+	margin-left: 250px;
+	margin-right: 250px;
+
+}
+
+.profiles .form-control {
+
+width: 50%;
+display: inline-block;
+position: absolute;
+left: 300px;
+
+}
+
+.profiles .form-group {
+
+margin-top: 20px;
+
+}
+
+.profiles .inline-date {
+right: -50px;
+display: inline-block;
+width: auto;
+
+
+}
+
+
+.profiles #profile_date_of_employment_2i{
+	margin-left: 95px;
+}
+
+.profiles #profile_date_of_employment_3i{
+	margin-left: 230px;
+}

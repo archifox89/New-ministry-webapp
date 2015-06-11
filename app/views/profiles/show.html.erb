@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+
+<p><strong>Full Name:</strong><%= @profile.name %></p>
+<p><strong>Civil ID no.:</strong><%= @profile.civil %></p>
+<p><strong>Date of Employment</strong><%= @profile.date_of_employment %></p>
+
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

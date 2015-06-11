@@ -43,6 +43,6 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params[:profile]
+      params.require(:profile).permit(:name, :civil, :date_of_employment)
     end
 end
