@@ -70,6 +70,7 @@ GEM
     mime-types (2.6.1)
     minitest (5.7.0)
     multi_json (1.11.0)
+    nested_form (0.3.2)
     orm_adapter (0.5.0)
     pg (0.18.2-x86-mingw32)
     rack (1.5.3)
@@ -149,6 +150,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
+  nested_form
   pg
   rails (= 4.1.8)
   rails_12factor

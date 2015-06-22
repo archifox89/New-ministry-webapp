@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150611080522) do
+ActiveRecord::Schema.define(version: 20150622094934) do
+
+  create_table "experiences", force: true do |t|
+    t.string   "company"
+    t.date     "period_of_employment"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "profile_id"
+    t.date     "end_date"
+  end
+
+  add_index "experiences", ["profile_id"], name: "index_experiences_on_profile_id"
+  add_index "experiences", ["user_id"], name: "index_experiences_on_user_id"
 
   create_table "profiles", force: true do |t|
     t.datetime "created_at"
@@ -24,6 +38,11 @@ ActiveRecord::Schema.define(version: 20150611080522) do
     t.string   "work_email"
     t.string   "personal_email"
     t.string   "internal_no"
+    t.string   "nationality"
+    t.string   "gender"
+    t.string   "academic_degree"
+    t.string   "major"
+    t.string   "work_experience"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   
+  resources :experiences
+
   resources :profiles
 
   devise_for :users

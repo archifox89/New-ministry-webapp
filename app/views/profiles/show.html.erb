@@ -10,8 +10,21 @@
 		<p><strong>Work Email:</strong>&nbsp;&nbsp;<%= @profile.work_email %></p>
 		<p><strong>Personal Email</strong>&nbsp;&nbsp;<%= @profile.personal_email %></p>
 		<p><strong>Internal no:</strong>&nbsp;&nbsp;<%= @profile.internal_no %></p>
+		<p><strong>Nationality:</strong>&nbsp;&nbsp;<%= @profile.nationality %></p>
+		<p><strong>Gender:</strong>&nbsp;&nbsp;<%= @profile.gender %></p>
+		<p><strong>Academic Degree:</strong>&nbsp;&nbsp;<%= @profile.academic_degree %></p>
+		<p><strong>Major:</strong>&nbsp;&nbsp;<%= @profile.major %></p>
+		
+		<% @profile.experiences.each do |experience| %>
+	  <p><strong>Company / Workplace</strong>&nbsp;&nbsp;<%= experience.company %></p>
+	  <p><strong>Start Date</strong>&nbsp;&nbsp;<%= experience.period_of_employment %></p>
+	  <p><strong>End Date</strong>&nbsp;&nbsp;<%= experience.end_date %></p>
+	  <p><strong>Job Title</strong>&nbsp;&nbsp;<%= experience.title %></p>
+		<% end %>
+
 
 		<%= link_to 'Edit', edit_profile_path(@profile) %> |
 		<%= link_to 'Back', profiles_path %>
 	</div>
 </div>
+

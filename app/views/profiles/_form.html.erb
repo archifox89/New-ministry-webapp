@@ -1,20 +1,70 @@
-<%= simple_form_for(@profile) do |f| %>
+<%= simple_nested_form_for(@profile) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-  	<%= f.input :name, label: 'Full Name:' %>
-  	<%= f.input :civil, label: 'Civil ID:' %>
-  	<%= f.input :date_of_employment, label: 'Date of Employement:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
-    <%= f.input :mobile, label: 'Mobile no:' %>
-    <%= f.input :work_email, label: 'Work Email:' %>
-    <%= f.input :personal_email, label: 'Personal Email:' %>
-    <%= f.input :internal_no, label: 'Internal no:' %>
 
+  <div class="form-inputs">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Basic Info</h3>
+      </div>
+    <div class="panel-body">
+    	<%= f.input :name, label: 'Full Name:' %>
+    	<%= f.input :civil, label: 'Civil ID:' %>
+      <%= f.input :gender, :collection => [['Male', false], ['Female', true]], label: 'Gender:', as: :radio_buttons, as: :radio_buttons,  :checked => ['Female', true], :label_method => :first, :value_method => :last %>
+      <%= f.input :nationality, :collection => [['Non-Kuwaiti', false], ['Kuwaiti', true]], label: 'Nationality:', as: :radio_buttons,  :checked => ['Kuwaiti', true] %>
+      <%= f.input :mobile, label: 'Mobile no:' %>
+      <%= f.input :personal_email, label: 'Personal Email:' %>
+
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Academic / Job Info</h3>
+      </div>
+    <div class="panel-body">
+    <%= f.input :academic_degree, collection: ["Pre-Bachelor's Degree", "Diploma", "Bachelor's Degree", "Master's Degree", "Ph.D"], label: 'Academic Degree', as: :select, :include_blank => 'Choose Your Degree...' %>
+    <%= f.input :major, collection: ["Architecture", "Civil Engineering", "Mechanical Engineering", "Chemical Engineering", "Computer Engineering", "Interior Designer", "Electrical Engineering", "Civil Engineering / Structure", "Administration"], label: 'Major', as: :select, :include_blank => 'Choose Your Major...' %>
+  	<%= f.input :date_of_employment, label: 'Date of Employement:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
+    <%= f.input :work_email, label: 'Work Email:' %>
+    <%= f.input :internal_no, label: 'Internal no:' %>
+    <%= f.input :work_experience, collection: ['No', 'Yes'], label: 'Previous Work Experience?', as: :radio_buttons, :include_blank => false %>
+   </div>
+  </div>
+    
+  <div class="form-inputs">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Work Experience</h3>
+      </div>
+    <div class="panel-body">
+
+    <%= f.simple_fields_for :experiences do |builder| %>
+    <h4>New Experience</h4>
+        <%= builder.input :company %>
+    <%= builder.input :period_of_employment, label: 'Start Date:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
+    <%= builder.input :end_date, label: 'End Date:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
+    <%= builder.input :title, label: 'Job Title' %>
+    <%= builder.link_to_remove "Remove" %>
+    
+      <% end %>
+   <%= f.link_to_add "Add Experience", :experiences %>
+
+    </div>
+  </div>
 
 
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
   </div>
 <% end %>
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'devise', '~> 3.4.1'
 gem 'simple_form'
+gem "nested_form"
 
 group :development, :test do
      gem 'sqlite3'
