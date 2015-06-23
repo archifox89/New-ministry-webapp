@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150622094934) do
+ActiveRecord::Schema.define(version: 20150623075339) do
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150622094934) do
     t.integer  "user_id"
     t.integer  "profile_id"
     t.date     "end_date"
+    t.string   "uploads"
   end
 
   add_index "experiences", ["profile_id"], name: "index_experiences_on_profile_id"

@@ -1,19 +1,44 @@
 <div class="row">
-	<div class="col-md-offset-1 col-md-8">
+	<div class="col-md-offset-2 col-md-8">
 		<p id="notice"><%= notice %></p>
 
+    <div class="form-inputs">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Basic Info</h4>
+      </div>
+    <div class="panel-body">
 
 		<p><strong>Full Name:</strong>&nbsp;&nbsp;<%= @profile.name %></p>
 		<p><strong>Civil ID no:</strong>&nbsp;&nbsp;<%= @profile.civil %></p>
-		<p><strong>Date of Employment:</strong>&nbsp;&nbsp;<%= @profile.date_of_employment %></p>
-		<p><strong>Mobile no:</strong>&nbsp;&nbsp;<%= @profile.mobile %></p>
-		<p><strong>Work Email:</strong>&nbsp;&nbsp;<%= @profile.work_email %></p>
-		<p><strong>Personal Email</strong>&nbsp;&nbsp;<%= @profile.personal_email %></p>
-		<p><strong>Internal no:</strong>&nbsp;&nbsp;<%= @profile.internal_no %></p>
-		<p><strong>Nationality:</strong>&nbsp;&nbsp;<%= @profile.nationality %></p>
 		<p><strong>Gender:</strong>&nbsp;&nbsp;<%= @profile.gender %></p>
+		<p><strong>Nationality:</strong>&nbsp;&nbsp;<%= @profile.nationality %></p>
+		<p><strong>Mobile no:</strong>&nbsp;&nbsp;<%= @profile.mobile %></p>
+		<p><strong>Personal Email:</strong>&nbsp;&nbsp;<%= @profile.personal_email %></p>
+
+		  </div>
+  </div>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Academic / Job Info</h4>
+      </div>
+    <div class="panel-body">
+
 		<p><strong>Academic Degree:</strong>&nbsp;&nbsp;<%= @profile.academic_degree %></p>
 		<p><strong>Major:</strong>&nbsp;&nbsp;<%= @profile.major %></p>
+		<p><strong>Date of Employment:</strong>&nbsp;&nbsp;<%= @profile.date_of_employment %></p>
+		<p><strong>Work Email:</strong>&nbsp;&nbsp;<%= @profile.work_email %></p>
+		<p><strong>Internal no:</strong>&nbsp;&nbsp;<%= @profile.internal_no %></p>
+
+		  </div>
+  </div>
+		
+		  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Academic / Job Info</h4>
+      </div>
+    <div class="panel-body">
 		
 		<% @profile.experiences.each do |experience| %>
 	  <p><strong>Company / Workplace</strong>&nbsp;&nbsp;<%= experience.company %></p>
@@ -21,6 +46,10 @@
 	  <p><strong>End Date</strong>&nbsp;&nbsp;<%= experience.end_date %></p>
 	  <p><strong>Job Title</strong>&nbsp;&nbsp;<%= experience.title %></p>
 		<% end %>
+
+				  </div>
+  </div>
+		
 
 
 		<%= link_to 'Edit', edit_profile_path(@profile) %> |

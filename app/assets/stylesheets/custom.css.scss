@@ -37,14 +37,16 @@
 			margin-top: 30px;
 	  	text-align: center;
 	  	font-size: 1.7em;
+	  	margin-bottom: 30px;
 	  }
 
-	   /* 
+	
 
 .edit h3  {
 			margin-top: 30px;
 	  	text-align: center;
 	  	font-size: 1.7em;
+	  	margin-bottom: 30px;
 	  }
 
 .new h3  {
@@ -53,7 +55,7 @@
 	  	font-size: 1.7em;
 	  }
 
-	   */
+	
 
 
 .nav {
@@ -103,69 +105,10 @@ width: 100%;
 
 }
 
-.profiles .form-control {
 
-width: 50%;
-display: inline-block;
-position: absolute;
-left: 300px;
+.form-horizontal .control-label {
+
+text-align: left;
 
 }
-
-.profiles .form-group {
-
-margin-top: 25px;
-
-}
-
-.profiles .inline-date {
-right: -50px;
-display: inline-block;
-width: auto;
-
-}
-
-
-.profiles #profile_date_of_employment_2i{
-	margin-left: 95px;
-}
-
-.profiles #profile_date_of_employment_3i{
-	margin-left: 230px;
-}
-
-
-
-.radio  {
-
-padding-top: 3px;
-position: absolute;
-display: inline-block;
-left: 300px;
-margin-bottom: 5px;
-
-}
-
-
-.radio label {
-	padding-top: 5px;
-}
-
-.experiences .inline-date {
-right: -50px;
-display: inline-block;
-width: auto;
-
-}
-
-
-
-.profiles #profile_experiences_attributes_0_period_of_employment_2i {
-	margin-left: 95px;
-}
-
-.profiles #profile_experiences_attributes_0_period_of_employment_3i {
-	margin-left: 230px;
-}
-
 
