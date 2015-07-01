@@ -4,6 +4,9 @@ class Profile < ActiveRecord::Base
 	has_many :experiences, :dependent => :destroy
 
 	accepts_nested_attributes_for :experiences, allow_destroy: true
-	
-	
+
+	validates :name, presence: true
+
+
 end
+

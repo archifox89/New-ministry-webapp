@@ -11,8 +11,8 @@
 
 		<p><strong>Full Name:</strong>&nbsp;&nbsp;<%= @profile.name %></p>
 		<p><strong>Civil ID no:</strong>&nbsp;&nbsp;<%= @profile.civil %></p>
-		<p><strong>Gender:</strong>&nbsp;&nbsp;<%= @profile.gender %></p>
-		<p><strong>Nationality:</strong>&nbsp;&nbsp;<%= @profile.nationality %></p>
+		<p><strong>Gender:</strong>&nbsp;&nbsp;<%= gender_to_s(@profile.gender)  %></p>
+		<p><strong>Nationality:</strong>&nbsp;&nbsp;<%= nationality_to_s(@profile.nationality) %></p>
 		<p><strong>Mobile no:</strong>&nbsp;&nbsp;<%= @profile.mobile %></p>
 		<p><strong>Personal Email:</strong>&nbsp;&nbsp;<%= @profile.personal_email %></p>
 
@@ -36,7 +36,7 @@
 		
 		  <div class="panel panel-default">
       <div class="panel-heading">
-        <h4 class="panel-title">Academic / Job Info</h4>
+        <h4 class="panel-title">Work Experience</h4>
       </div>
     <div class="panel-body">
 		

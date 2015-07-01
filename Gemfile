@@ -18,6 +18,7 @@ gem 'devise', '~> 3.4.1'
 gem 'simple_form'
 gem "nested_form"
 gem 'bootstrap_form'
+gem 'active_hash'
 
 group :development, :test do
      gem 'sqlite3'
