@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701082325) do
+ActiveRecord::Schema.define(version: 20150706203336) do
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20150701082325) do
     t.integer  "profile_id"
     t.date     "end_date"
     t.string   "uploads"
+    t.string   "contact_no"
+    t.string   "website"
   end
 
   add_index "experiences", ["profile_id"], name: "index_experiences_on_profile_id"
@@ -44,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150701082325) do
     t.string   "academic_degree"
     t.string   "major"
     t.string   "work_experience"
+    t.string   "folder"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
@@ -71,5 +74,16 @@ ActiveRecord::Schema.define(version: 20150701082325) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "vacations", force: true do |t|
+    t.string   "kind"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "vacations", ["user_id"], name: "index_vacations_on_user_id"
 
 end

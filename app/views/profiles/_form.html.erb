@@ -1,9 +1,6 @@
 <%= bootstrap_nested_form_for(@profile, layout: :horizontal) do |f| %>
 
 
-
-
-
   <div class="form-inputs">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -14,13 +11,13 @@
     	<%= f.text_field :civil, label: 'Civil ID:' %>
 
      <%= f.form_group :gender, label: { text: "Gender" } do %>
-    <%= f.radio_button :gender, 0, label: "Female", checked: true, inline: true %>
+    <%= f.radio_button :gender, 0, label: "Female", inline: true, checked: true %>
     <%= f.radio_button :gender, 1, label: "Male", inline: true %>
   <% end %>
 
 
       <%= f.form_group :nationality, label: { text: "Nationality" } do %>
-        <%= f.radio_button :nationality, 0, label: "Kuwaiti", checked: true, inline: true  %>
+        <%= f.radio_button :nationality, 0, label: "Kuwaiti", inline: true, checked: true  %>
         <%= f.radio_button :nationality, 1, label: "Non-Kuwaiti", inline: true  %>
       <% end %>
 
@@ -43,6 +40,7 @@
     <%= f.select :major,  [["Architecture"], ["Civil Engineering"], ["Mechanical Engineering"], ["Chemical Engineering"], ["Computer Engineering"], ["Interior Designer"], ["Electrical Engineering"], ["Civil Engineering / Structure"], ["Administration"]], { label: "Major"}, { class: "selectpicker" } %>
   	<%= f.date_select :date_of_employment, label: 'Date of Employement:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
     <%= f.email_field :work_email, label: 'Work Email:' %>
+    <%= f.text_field :folder, label: 'Folder no:' %>
     <%= f.text_field :internal_no, label: 'Internal no:' %>
     
    </div>
@@ -57,14 +55,17 @@
 
 
     <%= f.fields_for :experiences do |builder| %>
-        <%= builder.text_field :company %>
+        <%= builder.text_field :company, help: "If outside of Kuwait, please include country." %>
     <%= builder.date_select :period_of_employment, label: 'Start Date:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
     <%= builder.date_select :end_date, label: 'End Date:', as: :date, start_year: Date.today.year - 50, end_year: Date.today.year, order: [:day, :month, :year], input_html: { class: 'inline-date' } %>
     <%= builder.text_field :title, label: 'Job Title' %>
+    <%= builder.text_field :contact_no, label: 'Company no' %>
+    <%= builder.text_field :website, label: 'Company Website' %>
     <%= builder.file_field :uploads, label: 'Upload Certificate' %>
     <%= builder.link_to_remove "Remove" %>
     
       <% end %>
+      
    <%= f.link_to_add "Add Experience", :experiences %>
 
     </div>

@@ -15,7 +15,6 @@ gem "font-awesome-rails", '~> 4.3.0.0'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'devise', '~> 3.4.1'
-gem 'simple_form'
 gem "nested_form"
 gem 'bootstrap_form'
 gem 'active_hash'

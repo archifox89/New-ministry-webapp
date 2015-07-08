@@ -1,0 +1,21 @@
+<%= bootstrap_nested_form_for(@vacation, layout: :horizontal) do |f| %>
+
+  <div class="form-inputs">
+  	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Vacation Info</h4>
+      </div>
+    <div class="panel-body">
+    <%= f.select :kind, [["General"], ["Accompany a Patient"], ["Scholarship"]], { label: "Type"}, { class: "selectpicker" } %>
+    <%= f.date_select :start_date %>
+    <%= f.date_select :end_date %>
+
+     </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+

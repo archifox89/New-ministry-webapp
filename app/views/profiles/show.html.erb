@@ -29,26 +29,31 @@
 		<p><strong>Major:</strong>&nbsp;&nbsp;<%= @profile.major %></p>
 		<p><strong>Date of Employment:</strong>&nbsp;&nbsp;<%= @profile.date_of_employment %></p>
 		<p><strong>Work Email:</strong>&nbsp;&nbsp;<%= @profile.work_email %></p>
+		<p><strong>Folder no:</strong>&nbsp;&nbsp;<%= @profile.folder %></p>
 		<p><strong>Internal no:</strong>&nbsp;&nbsp;<%= @profile.internal_no %></p>
 
 		  </div>
   </div>
 		
+		
+		<% @profile.experiences.each do |experience| %>
 		  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">Work Experience</h4>
       </div>
     <div class="panel-body">
 		
-		<% @profile.experiences.each do |experience| %>
-	  <p><strong>Company / Workplace</strong>&nbsp;&nbsp;<%= experience.company %></p>
-	  <p><strong>Start Date</strong>&nbsp;&nbsp;<%= experience.period_of_employment %></p>
-	  <p><strong>End Date</strong>&nbsp;&nbsp;<%= experience.end_date %></p>
-	  <p><strong>Job Title</strong>&nbsp;&nbsp;<%= experience.title %></p>
+	  <p><strong>Company / Workplace:</strong>&nbsp;&nbsp;<%= experience.company %></p>
+	  <p><strong>Start Date:</strong>&nbsp;&nbsp;<%= experience.period_of_employment %></p>
+	  <p><strong>End Date:</strong>&nbsp;&nbsp;<%= experience.end_date %></p>
+	  <p><strong>Job Title:</strong>&nbsp;&nbsp;<%= experience.title %></p>
+	  <p><strong>Company Number:</strong>&nbsp;&nbsp;<%= experience.contact_no %></p>
+	  <p><strong>Company Website:</strong>&nbsp;&nbsp;<%= experience.website %></p>
+	  			  </div>
+  </div>
 		<% end %>
 
-				  </div>
-  </div>
+	
 		
 
 
