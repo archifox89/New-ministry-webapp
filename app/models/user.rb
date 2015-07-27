@@ -10,10 +10,4 @@ class User < ActiveRecord::Base
 
 end
 
-class Gender < ActiveHash::Base
-  self.data = [
-    {:id => 0, :gender => "Female"},
-    {:id => 1, :gender => "Male"}
-  ]
-end
 

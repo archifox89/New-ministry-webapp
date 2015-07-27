@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150706203336) do
+ActiveRecord::Schema.define(version: 20150727180643) do
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -50,6 +50,20 @@ ActiveRecord::Schema.define(version: 20150706203336) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "status"
+    t.string   "phase"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "sexes", force: true do |t|
     t.datetime "created_at"
