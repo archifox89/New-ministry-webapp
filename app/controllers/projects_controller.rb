@@ -14,16 +14,26 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @project.pictures.build
     respond_with(@project)
   end
 
+
   def edit
+  @project = Project.find(params[:id])
+  @project.pictures.build
   end
 
   def create
+
     @project = Project.new(project_params)
-    @project.save
-    respond_with(@project)
+    if @project.save
+    flash[:notice] = "Successfully created project."
+    redirect_to @project
+    else
+    render :action => 'new'
+    end
+
   end
 
   def update
@@ -42,6 +52,10 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-      params.require(:project).permit(:title, :description, :status, :phase, :location, :image)
+      params.require(:project).permit(:id, :title, :description, :status, :phase, :location, pictures_attributes: [:id, :image])
     end
 end
+
+
+
+

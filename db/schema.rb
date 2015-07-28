@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727180643) do
+ActiveRecord::Schema.define(version: 20150728092717) do
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(version: 20150727180643) do
 
   add_index "experiences", ["profile_id"], name: "index_experiences_on_profile_id"
   add_index "experiences", ["user_id"], name: "index_experiences_on_user_id"
+
+  create_table "pictures", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "project_id"
+  end
+
+  add_index "pictures", ["project_id"], name: "index_pictures_on_project_id"
 
   create_table "profiles", force: true do |t|
     t.datetime "created_at"
@@ -59,10 +71,6 @@ ActiveRecord::Schema.define(version: 20150727180643) do
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   create_table "sexes", force: true do |t|

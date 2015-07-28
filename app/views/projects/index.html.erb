@@ -4,7 +4,6 @@
 
   <% @projects.each do |project| %>
     <div class="box panel panel-default">
-      <%= link_to image_tag(project.image.url(:medium)), project %>
       <div class="panel-body">
         <p>
           <strong>Title:</strong>
@@ -40,3 +39,4 @@
 
 
 
+<%= link_to 'New Project', new_project_path %>

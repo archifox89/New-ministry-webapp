@@ -1,4 +1,4 @@
-<%= bootstrap_nested_form_for(@project, layout: :horizontal) do |f| %>
+<%= bootstrap_nested_form_for @project, :html => {:multipart => true}  do |f| %>
 
   <% if @project.errors.any? %>
     <div id="error_explanation">
@@ -13,18 +13,32 @@
   <% end %>
 
 
-    <%= f.text_field :title %>
-    <%= f.text_area :description %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description %>
+  <%= f.select :status, [["Active"], ["On Hiatus"]], { label: "Status"}, { class: "selectpicker" } %>
+  <%= f.select :phase, [["Phase 1"], ["Phase 2"], ["Phase 3"]],  { label: "Phase"}, { class: "selectpicker" } %>
+  <%= f.text_field :location %>
 
-    <%= f.select :status, [["Active"], ["On Hiatus"]], { label: "Status"}, { class: "selectpicker" } %>
-    <%= f.select :phase, [["Phase 1"], ["Phase 2"], ["Phase 3"]],  { label: "Phase"}, { class: "selectpicker" } %>
 
-    <%= f.text_field :location %>
-    <%= f.file_field :image, class: "form-control" %>
-    <%= f.submit %>
-   
 
+  <% f.fields_for :pictures do |builder| %>
+    <% if builder.object.new_record? %>
+     
+      <p>
+        <%= builder.file_field :image %>
+      </p>
+     
+    <% end %>
+    <%= builder.link_to_remove "Remove" %>
+  <% end %>
+
+  <p>
+   <%= f.link_to_add "Add Images", :pictures %>
+ </p>
+
+ <%= f.submit %>
 <% end %>
 
 
+ 
 
