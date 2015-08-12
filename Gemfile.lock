@@ -166,7 +166,7 @@ PLATFORMS
 DEPENDENCIES
   active_hash
   autoprefixer-rails
-  aws-sdk
+  aws-sdk (< 2.0)
   bootstrap-sass
   bootstrap_form
   bootstrap_progressbar
