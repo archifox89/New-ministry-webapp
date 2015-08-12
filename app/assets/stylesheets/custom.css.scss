@@ -1,8 +1,6 @@
 .jumbotron {
   margin-top: 0px;
   margin-bottom: 0px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 
 }
 
@@ -33,26 +31,44 @@
 }
 
 
+.projects .show {
+	margin-left: 30px;
+	margin-right: 30px;
+
+}
+
 .main h3 {
 			margin-top: 30px;
 	  	text-align: center;
 	  	font-size: 1.7em;
 	  	margin-bottom: 30px;
+	  	text-decoration: underline;
 	  }
 
 	
 
 .edit h3  {
-			margin-top: 30px;
+			margin-top: 10px;
 	  	text-align: center;
 	  	font-size: 1.7em;
 	  	margin-bottom: 30px;
+	  	text-decoration: underline;
 	  }
 
 .new h3  {
-			margin-top: 30px;
+			margin-top: 10px;
 	  	text-align: center;
 	  	font-size: 1.7em;
+	  	margin-bottom: 30px;
+	  	text-decoration: underline;
+	  }
+
+.show h3  {
+			margin-top: 10px;
+	  	text-align: center;
+	  	font-size: 1.7em;
+	  	margin-bottom: 30px;
+	  	text-decoration: underline;
 	  }
 
 	
@@ -119,3 +135,5 @@ text-align: left;
 
 
 }
+
+

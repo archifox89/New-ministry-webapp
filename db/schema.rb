@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728092717) do
+ActiveRecord::Schema.define(version: 20150811104215) do
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -71,12 +71,42 @@ ActiveRecord::Schema.define(version: 20150728092717) do
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "contractor"
+    t.string   "designer"
+    t.string   "area"
+    t.string   "budget"
+    t.date     "project_start"
+    t.string   "construction_period"
+    t.date     "expected_date"
+    t.string   "client"
+    t.string   "collaborator"
+    t.string   "structural"
+    t.string   "quantity"
+    t.string   "m_e_engineer"
+    t.integer  "picture_id"
+    t.decimal  "design_cost"
+    t.decimal  "execution_cost"
+    t.date     "signature_date"
   end
+
+  add_index "projects", ["picture_id"], name: "index_projects_on_picture_id"
 
   create_table "sexes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "teams", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "member"
+    t.string   "role"
+  end
+
+  add_index "teams", ["project_id"], name: "index_teams_on_project_id"
+  add_index "teams", ["user_id"], name: "index_teams_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -92,6 +122,7 @@ ActiveRecord::Schema.define(version: 20150728092717) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "name"
+    t.string   "employee_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

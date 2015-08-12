@@ -15,13 +15,12 @@ class ProjectsController < ApplicationController
   def new
     @project = Project.new
     @project.pictures.build
+    @project.teams.build
     respond_with(@project)
   end
 
 
   def edit
-  @project = Project.find(params[:id])
-  @project.pictures.build
   end
 
   def create
@@ -52,7 +51,7 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-      params.require(:project).permit(:id, :title, :description, :status, :phase, :location, pictures_attributes: [:id, :image])
+      params.require(:project).permit(:id, :title, :description, :status, :phase, :location, :image, :contractor, :designer, :area, :budget, :project_start, :construction_period, :expected_date, pictures_attributes: [:id, :image, :_destroy], teams_attributes: [:project_id, :user_id, :id, :member, :role, :_destroy])
     end
 end
 

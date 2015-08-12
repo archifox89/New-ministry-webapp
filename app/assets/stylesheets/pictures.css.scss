@@ -1,3 +1,55 @@
 // Place all the styles related to the Pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#pictures {
+  margin: 0 auto;
+
+}
+
+.box {
+  margin: 10px;
+  width: 350px;
+
+
+}
+
+.image {
+  width: 350px;
+  height: 220px;
+  overflow: hidden;
+ 
+ 
+}
+
+.image img {
+	min-width:100%;
+}
+
+
+
+
+
+#photos {
+  margin: 0 auto;
+
+}
+
+
+
+
+.pic {
+	padding-top: 30px;
+	margin: auto;
+  width: 900px;
+  height: 100%;
+ 
+ 
+ 
+}
+
+.pic img {
+	min-width:100%;
+}
+

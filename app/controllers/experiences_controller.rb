@@ -22,7 +22,6 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_params)
-    @experience.user_id = current_user.id
     @experience.save
     respond_with(@experience)
   end

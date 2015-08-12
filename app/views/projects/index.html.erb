@@ -1,42 +1,55 @@
-<h3>Listing projects</h3>
+
+<div class="new-project">
+  <p>
+   <%= link_to 'New Project', new_project_path, class: "btn btn-primary btn-sm" %>
+  </p>
+</div>
 
 
-
+<div id="pictures">
   <% @projects.each do |project| %>
+
+  <div class="col-md-4">
+
     <div class="box panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= project.title %></h3>
+      </div>
+      <div class="image">
+         <%= link_to image_tag(project.pictures.first.image.url(:thumb)), project %>
+      </div>
       <div class="panel-body">
-        <p>
-          <strong>Title:</strong>
-          <%= project.title %>
-        </p>
 
         <p>
-          <strong>Description:</strong>
-          <%= project.description %>
+          <strong>Progress:</strong>
+          <%= progress_bar 0.6, label: true, alternative: 'info', striped: true %>
         </p>
+
 
         <p>
           <strong>Status:</strong>
           <%= project.status %>
         </p>
 
+
         <p>
           <strong>Phase:</strong>
           <%= project.phase %>
         </p>
 
-        <p>
-          <strong>Location:</strong>
-          <%= project.location %>
-        </p>
 
-        <%= link_to 'Show', project %>
-        <%= link_to 'Edit', edit_project_path(project) %>
+        <%= link_to 'Show', project %> |
+        <%= link_to 'Edit', edit_project_path(project) %> |
         <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
+      </div>
+
+    
   <% end %>
+</div>
 
 
 
-<%= link_to 'New Project', new_project_path %>
+
+

@@ -19,6 +19,8 @@ gem "nested_form"
 gem 'bootstrap_form'
 gem 'active_hash'
 gem 'paperclip', '~> 4.2'
+gem "jquery-fileupload-rails"
+gem 'bootstrap_progressbar'
 
 group :development, :test do
      gem 'sqlite3'
