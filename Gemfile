@@ -21,6 +21,7 @@ gem 'active_hash'
 gem 'paperclip', '~> 4.2'
 gem "jquery-fileupload-rails"
 gem 'bootstrap_progressbar'
+gem 'aws-sdk'
 
 group :development, :test do
      gem 'sqlite3'
