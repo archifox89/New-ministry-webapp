@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812163540) do
+ActiveRecord::Schema.define(version: 20150812195110) do
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 20150812163540) do
     t.string   "quantity"
     t.string   "m_e_engineer"
     t.integer  "picture_id"
-    t.decimal  "design_cost"
-    t.decimal  "execution_cost"
+    t.string   "design_cost"
+    t.string   "execution_cost"
     t.date     "signature_date"
   end
 
