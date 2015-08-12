@@ -10,17 +10,6 @@
     	<%= f.text_field :name, label: 'Full Name:' %>
     	<%= f.text_field :civil, label: 'Civil ID:' %>
 
-     <%= f.form_group :gender, label: { text: "Gender" } do %>
-    <%= f.radio_button :gender, 0, label: "Female", inline: true, checked: true %>
-    <%= f.radio_button :gender, 1, label: "Male", inline: true %>
-  <% end %>
-
-
-      <%= f.form_group :nationality, label: { text: "Nationality" } do %>
-        <%= f.radio_button :nationality, 0, label: "Kuwaiti", inline: true, checked: true  %>
-        <%= f.radio_button :nationality, 1, label: "Non-Kuwaiti", inline: true  %>
-      <% end %>
-
       <%= f.text_field :mobile, label: 'Mobile no:' %>
       <%= f.email_field :personal_email, label: 'Personal Email:' %>
 
