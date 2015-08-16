@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   respond_to :html
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order("created_at ASC")
     respond_with(@projects)
   end
 
@@ -51,7 +51,7 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-      params.require(:project).permit(:id, :title, :description, :status, :phase, :location, :contractor, :designer, :area, :budget, :project_start, :construction_period, :expected_date, pictures_attributes: [:id, :image, :_destroy], teams_attributes: [:project_id, :user_id, :id, :member, :role, :_destroy])
+      params.require(:project).permit(:id, :title, :description, :status, :phase, :location, :contractor, :designer, :area, :budget, :project_start, :construction_period, :expected_date, :picture_id, pictures_attributes: [:id, :image, :_destroy], teams_attributes: [:project_id, :user_id, :id, :member, :role, :_destroy])
     end
 end
 

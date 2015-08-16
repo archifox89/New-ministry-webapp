@@ -18,7 +18,7 @@ gem 'devise', '~> 3.4.1'
 gem "nested_form"
 gem 'bootstrap_form'
 gem 'active_hash'
-gem 'paperclip', '~> 4.2'
+gem "paperclip", "~> 4.3"
 gem "jquery-fileupload-rails"
 gem 'bootstrap_progressbar'
 gem 'aws-sdk', '< 2.0'
