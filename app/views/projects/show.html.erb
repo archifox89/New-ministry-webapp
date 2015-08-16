@@ -1,178 +1,189 @@
-<div class="row">
-  <div class="col-md-offset-1 col-md-10">
+
 
     <h3><%= @project.title %></h3>
 
+    <div role="tabpanel">
 
-    <div class="form-inputs">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">Description</h4>
-        </div>
-      <div class="panel-body">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
+        <li role="presentation"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General Info</a></li>
+        <li role="presentation"><a href="#schedule" aria-controls="schedule" role="tab" data-toggle="tab">Schedule</a></li>
+        <li role="presentation"><a href="#budget" aria-controls="budget" role="tab" data-toggle="tab">Budget</a></li>
+        <li role="presentation"><a href="#reports" aria-controls="reports" role="tab" data-toggle="tab">Reports</a></li>
+        <li role="presentation"><a href="#team" aria-controls="team" role="tab" data-toggle="tab">Team</a></li>
+        <li role="presentation"><a href="#images" aria-controls="images" role="tab" data-toggle="tab">Images</a></li>
+   
+      <!-- Tab panes -->
+      <div class="tab-content">
 
-        <p>
-          <%= simple_format(@project.description) %>
-        </p>
-
-      </div>
-    </div>
-  </div>
-    
-     <div class="form-inputs">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">General Info</h4>
-        </div>
-      <div class="panel-body">
-
-        <p>
-          <strong>Status:</strong>
-          <%= @project.status %>
-        </p>
-
-        <p>
-          <strong>Phase:</strong>
-          <%= @project.phase %>
-        </p>
-
-        <p>
-          <strong>Location:</strong>
-          <%= @project.location %>
-        </p>
-
-        <p>
-          <strong>Area:</strong>
-          <%= @project.area %>
-        </p>
-
-        <p>
-          <strong>Client:</strong>
-          <%= @project.client %>
-        </p>
-
-        <p>
-          <strong>Designer:</strong>
-          <%= @project.designer %>
-        </p>
-
-
-         <p>
-          <strong>Contractor:</strong>
-          <%= @project.contractor %>
-        </p>
-
-
-      </div>
-    </div>
-  </div>
-
-
-
-    <div class="form-inputs">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">Team</h4>
-        </div>
-        <div class="panel-body">
-          <% @project.teams.each do |team| %>
-            <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.member %> - <%= team.role %></p>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="form-inputs">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">Schedule Info</h4>
-        </div>
-      <div class="panel-body">
-
-        <p>
-          <strong>Project Start Date:</strong>
-          <%= @project.project_start %>
-        </p>
-
-        <p>
-          <strong>Expected Completion Date:</strong>
-          <%= @project.expected_date %>
-        </p>
-
-        <p>
-          <strong>Date of Contract Signature:</strong>
-          <%= @project.signature_date %>
-        </p>
-
-        <p>
-          <strong>Construction Period (Months):</strong>
-          <%= @project.construction_period %> months
-        </p>
-
-      <p>
-        <strong>Expected Stage:</strong>
-        <%= progress_bar 0.4, label: true, alternative: 'success' %>
-      </p>
-
-      <p>
-        <strong>Actual Stage:</strong>
-        <%= progress_bar 0.3, label: true, alternative: 'warning' %>
-      </p>
-
-      </div>
-    </div>
-  </div>
-
-    <div class="form-inputs">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">Budget Info</h4>
-        </div>
-        <div class="panel-body">
-
-          <p>
-            <strong>Designated Budget:</strong>
-            <%= @project.budget %> KD
-          </p>
-
-          <p>
-            <strong>Design Cost:</strong>
-            <%= @project.design_cost %> KD
-          </p>
-
-          <p>
-            <strong>Execution Cost:</strong>
-            <%= @project.execution_cost %> KD
-          </p>
-
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="form-inputs">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">Images</h4>
-        </div>
-        <div class="panel-body">
-        <div id="photos">
-              <% @project.pictures.each do |picture| %>
-              <div class="pic">
-                <%= image_tag picture.image.url(:medium) %>
+        <div role="tabpanel" class="tab-pane active" id="description">
+          <div class="form-inputs">
+            <div class="panel panel-default">
+              
+              <div class="panel-body">
+                <p>
+                  <%= simple_format(@project.description) %>
+                </p>
               </div>
-              <% end %>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <%= link_to 'Edit', edit_project_path(@project) %> |
-    <%= link_to 'Back', projects_path %>
+
+
+
+        <div role="tabpanel" class="tab-pane" id="general">
+          <ul class="list-group">
+             <li class="list-group-item">
+                <strong>Status:</strong>
+                <%= @project.status %>
+              </li>
+              <li class="list-group-item">
+                <strong>Phase:</strong>
+                <%= @project.phase %>        
+              </li>
+              <li class="list-group-item">
+                <strong>Location:</strong>
+                <%= @project.location %>
+              </li>
+              <li class="list-group-item">
+                <strong>Area:</strong>
+                <%= @project.area %>
+              </li>
+              <li class="list-group-item">
+                <strong>Client:</strong>
+                <%= @project.client %>
+              </li>
+              <li class="list-group-item">
+                <strong>Designer:</strong>
+                <%= @project.designer %>
+              </li>
+             <li class="list-group-item">
+                <strong>Contractor:</strong>
+                <%= @project.contractor %>
+             </li>
+          </ul>
+        </div>
+
+
+
+
+          <div role="tabpanel" class="tab-pane" id="schedule">
+             <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Project Start Date:</strong>
+              <%= @project.project_start %>
+            </li>
+            <li class="list-group-item">
+              <strong>Expected Completion Date:</strong>
+              <%= @project.expected_date %>
+            </li>
+            <li class="list-group-item">
+     
+              <strong>Date of Contract Signature:</strong>
+              <%= @project.signature_date %>
+            </li>
+
+           <li class="list-group-item">
+              <strong>Construction Period (Months):</strong>
+              <%= @project.construction_period %> months
+          </li>
+          <li class="list-group-item">
+            <strong>Expected Stage:</strong>
+            <%= progress_bar 0.4, label: true, alternative: 'success' %>
+          </li>
+         <li class="list-group-item">
+            <strong>Actual Stage:</strong>
+            <%= progress_bar 0.3, label: true, alternative: 'warning' %>
+        </li>
+      </ul>
+
+              
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="budget">
+            <div class="form-inputs">
+              <div class="panel panel-default">
+                
+                <div class="panel-body">
+
+                  <p>
+                    <strong>Designated Budget:</strong>
+                    <%= @project.budget %> KD
+                  </p>
+
+                  <p>
+                    <strong>Design Cost:</strong>
+                    <%= @project.design_cost %> KD
+                  </p>
+
+                  <p>
+                    <strong>Execution Cost:</strong>
+                    <%= @project.execution_cost %> KD
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div role="tabpanel" class="tab-pane" id="reports">
+            <div class="form-inputs">
+              <div class="panel panel-default">
+                
+                <div class="panel-body">
+
+              
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div role="tabpanel" class="tab-pane" id="team">
+            <div class="form-inputs">
+              <div class="panel panel-default">
+                
+                <div class="panel-body">
+                  <% @project.teams.each do |team| %>
+                    <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.member %> - <%= team.role %></p>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        
+
+          <div role="tabpanel" class="tab-pane" id="images">
+           <div class="form-inputs">
+              <div class="panel panel-default">
+               
+                <div class="panel-body">
+                  <div id="photos">
+                    <% @project.pictures.each do |picture| %>
+                      <div class="pic">
+                        <%= image_tag picture.image.url(:medium) %>
+                       <%=  link_to 'Download file', picture.image.url %>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     
+      </div> 
+     </div>
+
+  <div class='button-wrap'>
+    <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-primary' %>
+    <%= link_to 'Back', projects_path, class: 'btn btn-primary' %>
   </div>
-</div>
-
 
 
