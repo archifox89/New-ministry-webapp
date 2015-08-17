@@ -69,114 +69,141 @@
 
 
 
-          <div role="tabpanel" class="tab-pane" id="schedule">
-             <ul class="list-group">
-            <li class="list-group-item">
-              <strong>Project Start Date:</strong>
-              <%= @project.project_start %>
-            </li>
-            <li class="list-group-item">
-              <strong>Expected Completion Date:</strong>
-              <%= @project.expected_date %>
-            </li>
-            <li class="list-group-item">
-     
-              <strong>Date of Contract Signature:</strong>
-              <%= @project.signature_date %>
-            </li>
+        <div role="tabpanel" class="tab-pane" id="schedule">
+          <ul class="list-group">
+              <li class="list-group-item">
+                <strong>Project Start Date:</strong>
+                <%= @project.project_start %>
+              </li>
+              <li class="list-group-item">
+                <strong>Expected Completion Date:</strong>
+                <%= @project.expected_date %>
+              </li>
+              <li class="list-group-item">
+       
+                <strong>Date of Contract Signature:</strong>
+                <%= @project.signature_date %>
+              </li>
 
+             <li class="list-group-item">
+                <strong>Construction Period (Months):</strong>
+                <%= @project.construction_period %> months
+            </li>
+            <li class="list-group-item">
+              <strong>Expected Stage:</strong>
+              <%= progress_bar 0.4, label: true, alternative: 'success' %>
+            </li>
+            <li class="list-group-item">
+              <strong>Actual Stage:</strong>
+              <%= progress_bar 0.3, label: true, alternative: 'warning' %>
+            </li>
+          </ul>
+        </div>
+
+       
+            
+
+        <div role="tabpanel" class="tab-pane" id="budget">
+         <ul class="list-group">
            <li class="list-group-item">
-              <strong>Construction Period (Months):</strong>
-              <%= @project.construction_period %> months
-          </li>
-          <li class="list-group-item">
-            <strong>Expected Stage:</strong>
-            <%= progress_bar 0.4, label: true, alternative: 'success' %>
-          </li>
-         <li class="list-group-item">
-            <strong>Actual Stage:</strong>
-            <%= progress_bar 0.3, label: true, alternative: 'warning' %>
-        </li>
-      </ul>
+              <strong>Designated Budget:</strong>
+              <%= @project.budget %> KD
+            </li>
+            <li class="list-group-item">
+              <strong>Design Cost:</strong>
+              <%= @project.design_cost %> KD
+            </li>
+            <li class="list-group-item">
+              <strong>Execution Cost:</strong>
+              <%= @project.execution_cost %> KD
+            </li>
+          </ul>
+        </div>
 
+
+        <div role="tabpanel" class="tab-pane" id="reports">
+    
+                <table class="table table-striped">
+                  <tr>
+                    <th>Number</th>
+                    <th>Phase</th>
+                    <th>Date Issued</th>
+                    <th>View / Download</th>
+                  </tr>
+                  <tr>
+                    <td># 1</td>
+                    <td>300</td>
+                    <td>12/5/2015</td>
+                    <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
+                  </tr>
+                  <tr>
+                    <td># 2</td>
+                    <td>300</td>
+                    <td>12/6/2015</td>
+                    <td><%= link_to "Download Report", "#", class: 'link-color'  %></td>
+                  </tr>
+                  <tr>
+                    <td># 3</td>
+                    <td>300</td>
+                    <td>12/7/2015</td>
+                    <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
+                  </tr>
+                  <td># 4</td>
+                    <td>300</td>
+                    <td>12/8/2015</td>
+                    <td><%= link_to "Download Report", "#", class: 'link-color'  %></td>
+                  </tr>
+                  </tr>
+                  <td># 5</td>
+                    <td>300</td>
+                    <td>12/9/2015</td>
+                    <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
+                  </tr>
+                  </tr>
+                  <td># 6</td>
+                    <td>300</td>
+                    <td>12/10/2015</td>
+                    <td><%= link_to "Download Report", "#", class: 'link-color'  %></td>
+                  </tr>
+                </table>
+      
+        </div>
+
+
+        <div role="tabpanel" class="tab-pane" id="team">
+          <div class="form-inputs">
+            <div class="panel panel-default">
               
-          </div>
-
-          <div role="tabpanel" class="tab-pane" id="budget">
-            <div class="form-inputs">
-              <div class="panel panel-default">
-                
-                <div class="panel-body">
-
-                  <p>
-                    <strong>Designated Budget:</strong>
-                    <%= @project.budget %> KD
-                  </p>
-
-                  <p>
-                    <strong>Design Cost:</strong>
-                    <%= @project.design_cost %> KD
-                  </p>
-
-                  <p>
-                    <strong>Execution Cost:</strong>
-                    <%= @project.execution_cost %> KD
-                  </p>
-
-                </div>
+              <div class="panel-body">
+                <% @project.teams.each do |team| %>
+                  <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.member %> - <%= team.role %></p>
+                <% end %>
               </div>
             </div>
           </div>
+        </div>
 
 
-          <div role="tabpanel" class="tab-pane" id="reports">
-            <div class="form-inputs">
-              <div class="panel panel-default">
-                
-                <div class="panel-body">
 
-              
+      
 
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div role="tabpanel" class="tab-pane" id="team">
-            <div class="form-inputs">
-              <div class="panel panel-default">
-                
-                <div class="panel-body">
-                  <% @project.teams.each do |team| %>
-                    <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.member %> - <%= team.role %></p>
+        <div role="tabpanel" class="tab-pane" id="images">
+         <div class="form-inputs">
+            <div class="panel panel-default">
+             
+              <div class="panel-body">
+                <div id="photos">
+                  <% @project.pictures.each do |picture| %>
+                    <div class="pic">
+                      <%= image_tag picture.image.url(:medium) %>
+                     <%=  link_to 'Download file', picture.image.url %>
+                    </div>
                   <% end %>
                 </div>
               </div>
             </div>
           </div>
-
-
-
-        
-
-          <div role="tabpanel" class="tab-pane" id="images">
-           <div class="form-inputs">
-              <div class="panel panel-default">
-               
-                <div class="panel-body">
-                  <div id="photos">
-                    <% @project.pictures.each do |picture| %>
-                      <div class="pic">
-                        <%= image_tag picture.image.url(:medium) %>
-                       <%=  link_to 'Download file', picture.image.url %>
-                      </div>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
      
       </div> 
      </div>

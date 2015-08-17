@@ -141,3 +141,13 @@ text-align: left;
  display: inline-block;
 	margin-left: 150px;
 }
+
+
+td, th {
+	text-align: center;
+}
+
+.link-color {
+	color:  #0070FF !important;
+	text-decoration: underline;
+}

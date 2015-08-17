@@ -12,10 +12,10 @@
  *
  *= require_self
  *= require my_stylings
+ *= require navbar
  *= require custom 
  *= require pictures 
  *= require projects
  *= require rails_bootstrap_forms
- *= require navbar
  *= require font-awesome
  */
