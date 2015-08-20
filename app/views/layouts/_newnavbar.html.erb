@@ -12,30 +12,30 @@
 					<li><%= link_to new_profile_path do %><i class="fa fa-user-plus"></i>Create Profile</li>
 					<% end %>
 				<% end %>
-			 		<ul>
+	 <!--   <ul>
 			 			<li><%= link_to "Tasks / Activities", tasks_path %></li>
 			 			<li><%= link_to "Vacations", new_vacation_path %></li>
-			 		</ul>
-			 </li>
+			 		</ul>  -->
+			 </li>  
 			 <li><%= link_to projects_path do %>
 			 		<i class="fa fa-building-o"></i>Projects<i class="fa fa-sort-desc"></i>
 			 		<% end %>
-			 	<ul>
+			 	<!--	<ul>
 		 			<li><%= link_to active_path do %>Active Projects<i class="fa fa-caret-right"></i>
 		 				<% end %>
-			 			<ul>
+			 		<ul>
 				 			<li><%= link_to "Preliminary Stage", presignature_path %></li>
 				 			<li><%= link_to "Design Stage", develop_path %></li>
 				 			<li><%= link_to "Tendered Stage", proposed_path %></li>
 				 		</ul>
 		 			</li>
 		 			<li><%= link_to "Archive", archive_path %></li>
-		 		</ul>
+		 		</ul> -->
 			 </li>
 		   <li><%= link_to project_docs_path do %>
 		   	<i class="fa fa-folder-open"></i>Project Documents<i class="fa fa-sort-desc"></i>
 		   	<% end %>
-			 	<ul>
+			<!-- 	<ul>
 		 			<li><%= link_to "Preliminary Stage", presignature2_path %></li>
 		 			<li><%= link_to development2_path do %>Design Stage<i class="fa fa-caret-right"></i>
 		 				<% end %>
@@ -47,9 +47,9 @@
 				 		</ul>
 		 			</li>
 		 			<li><%= link_to "Tendered Projects", proposed2_path %></li>
-		 		</ul>
+		 		</ul> -->
 		   </li>
-		   <li><%= link_to search_path do %>
+		   <li ><%= link_to search_path do %>
 		   	<i class="fa fa-search"></i>Search
 		   	<% end %>
 		   </li>
