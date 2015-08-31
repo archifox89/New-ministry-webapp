@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_project
   respond_to :html
 
   def index
@@ -13,18 +13,28 @@ class TeamsController < ApplicationController
   end
 
   def new
-    @team = Team.new
+    @project = Project.find(params[:project_id])
+    @team = @project.teams.new
     respond_with(@team)
   end
+
+
 
   def edit
   end
 
   def create
-    @team = Team.new(team_params)
-    @team.save
-    respond_with(@team)
+    @project = Project.find(params[:project_id])
+    @team = @project.teams.new(team_params)
+    @team.user = current_user
+   if @team.save
+      redirect_to @project, notice: 'Successfully Joined Project'
+    else
+      render action: 'new'
+    end
   end
+
+
 
   def update
     @team.update(team_params)
@@ -41,7 +51,11 @@ class TeamsController < ApplicationController
       @team = Team.find(params[:id])
     end
 
+    def set_project 
+      @project = Project.find(params[:project_id])
+    end 
+
     def team_params
-      params.require(:team).permit(:id, :user_id, :member, :role)
+      params.require(:team).permit(:id, :user_id, :member, :role, :project_id, )
     end
 end

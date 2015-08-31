@@ -1,4 +1,5 @@
 
+      
 
     <h3><%= @project.title %></h3>
 
@@ -176,7 +177,7 @@
               
               <div class="panel-body">
                 <% @project.teams.each do |team| %>
-                  <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.member %> - <%= team.role %></p>
+                  <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.user.employee_name %> - <%= team.role %></p>
                 <% end %>
               </div>
             </div>
@@ -185,7 +186,6 @@
 
 
 
-      
 
         <div role="tabpanel" class="tab-pane" id="images">
          <div class="form-inputs">
@@ -211,6 +211,5 @@
   <div class='button-wrap'>
     <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-primary' %>
     <%= link_to 'Back', projects_path, class: 'btn btn-primary' %>
+    <%= link_to 'Join Project', new_project_team_path(@project), class: 'btn btn-primary' %>
   </div>
-
-

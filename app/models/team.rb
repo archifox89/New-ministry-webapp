@@ -1,6 +1,7 @@
 class Team < ActiveRecord::Base
 
 	belongs_to :project
-	has_many :users
+	belongs_to :user
+
 
 end

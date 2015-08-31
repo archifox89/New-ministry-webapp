@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :pictures
+    resources :teams
   end
   
-  resources :teams
+  
 
   resources :vacations
 

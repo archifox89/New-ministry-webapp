@@ -1,17 +1,28 @@
-<%= form_for(@team) do |f| %>
-  <% if @team.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+<%= bootstrap_form_for [@project, @team] do |f| %>
 
-      <ul>
-      <% @team.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+
+    <% if @team.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+        <ul>
+        <% @team.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <%= f.select :role, [["Project Manager"], ["Assistant"], ["Other"]],  { label: "Role"}, { class: "selectpicker" } %>
+
+
+    <div class="actions">
+      <%= f.submit "Join Project"%>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
   </div>
-<% end %>
+</div>
+
