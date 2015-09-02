@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month range:</strong>
+  <%= @month.month_range %>
+</p>
+
+<p>
+  <strong>Phase:</strong>
+  <%= @month.phase %>
+</p>
+
+<%= link_to 'Edit', edit_project_month_path(@project, :id) %> |
+<%= link_to 'Back', project_months_path %>

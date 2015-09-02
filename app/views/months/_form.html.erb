@@ -1,0 +1,31 @@
+<%= bootstrap_form_for [@project, @month], :html => { :multipart => true }, layout: :horizontal do |f| %>
+
+  <% if @month.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@month.errors.count, "error") %> prohibited this month from being saved:</h2>
+
+      <ul>
+      <% @month.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.select :month_range, [["January"], ["February"], ["March"], ["April"], ["May"], ["June"], ["July"], ["August"], ["September"], ["October"], ["Novermber"], ["December"]],  { label: "Month"}, { class: "selectpicker" } %>
+  </div>
+  <div class="field">
+    <%= f.select :phase, [["100"], ["200"], ["300"]],  { label: "Phase"}, { class: "selectpicker" } %>
+  </div>
+  <div class="actions">
+    <%= f.file_field(:report) %>
+  </div>
+ <div class="actions">
+    <%= f.submit "Add Monthly Report" %>
+  </div>
+
+
+<% end %>
+
+

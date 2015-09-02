@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824063350) do
+ActiveRecord::Schema.define(version: 20150901104319) do
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -30,19 +30,19 @@ ActiveRecord::Schema.define(version: 20150824063350) do
   add_index "experiences", ["profile_id"], name: "index_experiences_on_profile_id"
   add_index "experiences", ["user_id"], name: "index_experiences_on_user_id"
 
-  create_table "monthly_reports", force: true do |t|
-    t.integer  "project_id"
-    t.string   "name"
-    t.date     "month"
+  create_table "months", force: true do |t|
+    t.string   "month_range"
+    t.string   "phase"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "file_file_name"
-    t.string   "file_content_type"
-    t.integer  "file_file_size"
-    t.datetime "file_updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+    t.integer  "project_id"
   end
 
-  add_index "monthly_reports", ["project_id"], name: "index_monthly_reports_on_project_id"
+  add_index "months", ["project_id"], name: "index_months_on_project_id"
 
   create_table "pictures", force: true do |t|
     t.datetime "created_at"
@@ -110,11 +110,6 @@ ActiveRecord::Schema.define(version: 20150824063350) do
 
   add_index "projects", ["picture_id"], name: "index_projects_on_picture_id"
   add_index "projects", ["team_id"], name: "index_projects_on_team_id"
-
-  create_table "sexes", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "teams", force: true do |t|
     t.integer  "user_id"

@@ -123,51 +123,26 @@
 
 
         <div role="tabpanel" class="tab-pane" id="reports">
-    
-                <table class="table table-striped">
-                  <tr>
-                    <th>Number</th>
-                    <th>Phase</th>
-                    <th>Date Issued</th>
-                    <th>View / Download</th>
-                  </tr>
-                  <tr>
-                    <td># 1</td>
-                    <td>300</td>
-                    <td>12/5/2015</td>
-                    <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-                  </tr>
-                  <tr>
-                    <td># 2</td>
-                    <td>300</td>
-                    <td>12/6/2015</td>
-                    <td><%= link_to "Download Report", "#", class: 'link-color'  %></td>
-                  </tr>
-                  <tr>
-                    <td># 3</td>
-                    <td>300</td>
-                    <td>12/7/2015</td>
-                    <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-                  </tr>
-                  <td># 4</td>
-                    <td>300</td>
-                    <td>12/8/2015</td>
-                    <td><%= link_to "Download Report", "#", class: 'link-color'  %></td>
-                  </tr>
-                  </tr>
-                  <td># 5</td>
-                    <td>300</td>
-                    <td>12/9/2015</td>
-                    <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-                  </tr>
-                  </tr>
-                  <td># 6</td>
-                    <td>300</td>
-                    <td>12/10/2015</td>
-                    <td><%= link_to "Download Report", "#", class: 'link-color'  %></td>
-                  </tr>
-                </table>
-      
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Month</th>
+              <th>Phase</th>
+              <th>View / Download</th>
+            </tr>
+
+            <% @project.months.each do |month| %>
+              <tr>
+                <td>#&nbsp;<%= month.id %></td>
+                <td><%= month.month_range %></td>
+                <td><%= month.phase %></td>
+                <td><%=  link_to 'Download file', month.report.url, target: "_blank"%></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Monthly Report", new_project_month_path(@project, @month), class: 'btn btn-primary' %>
+          </div>
         </div>
 
 
@@ -181,6 +156,9 @@
                 <% end %>
               </div>
             </div>
+             <div class="add-report">
+              <%= link_to 'Join Project', new_project_team_path(@project), class: 'btn btn-primary' %>
+              </div>
           </div>
         </div>
 
@@ -208,8 +186,4 @@
       </div> 
      </div>
 
-  <div class='button-wrap'>
-    <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-primary' %>
-    <%= link_to 'Back', projects_path, class: 'btn btn-primary' %>
-    <%= link_to 'Join Project', new_project_team_path(@project), class: 'btn btn-primary' %>
-  </div>
+

@@ -1,0 +1,28 @@
+<h1>Listing months</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month range</th>
+      <th>Phase</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @months.each do |month| %>
+      <tr>
+        <td><%= month.month_range %></td>
+        <td><%= month.phase %></td>
+        <td><%= link_to 'Show', [@project, month] %></td>
+        <td><%= link_to 'Edit', edit_project_month_path(@project, month) %></td>
+        <td><%= link_to 'Destroy', [@project, month], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Month', new_project_month_path %>
+
