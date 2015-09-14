@@ -1,0 +1,2 @@
+module AdminCircularsHelper
+end

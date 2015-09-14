@@ -1,0 +1,2 @@
+module MinistryReportsHelper
+end

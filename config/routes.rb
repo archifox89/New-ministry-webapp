@@ -1,10 +1,23 @@
 Rails.application.routes.draw do
   
+    resources :exterior_reports
+    resources :messages
+    resources :interior_circulars
+    resources :circulars
+    resources :reports
+    resources :interior_reports
+    resources :admin_circulars
+    resources :admin_reports
+    resources :ministry_reports
+
+
+
 
   resources :projects do
     resources :pictures
     resources :teams
     resources :months
+    resources :statuses
   end
   
   
@@ -37,7 +50,7 @@ end
   get "develop" => "subpages#develop" 
   get "proposed" => "subpages#proposed" 
   get "archive" => "subpages#archive" 
-  get "presignature2" => "subpages#presignature2" 
+  get "monthly_template" => "subpages#monthly_template" 
   get "development2" => "subpages#development2" 
   get "phase1" => "subpages#phase1" 
   get "phase2" => "subpages#phase2"  

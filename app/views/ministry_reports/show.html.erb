@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @ministry_report.number %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @ministry_report.subject %>
+</p>
+
+<p>
+  <strong>Date issued:</strong>
+  <%= @ministry_report.date_issued %>
+</p>
+
+<%= link_to 'Edit', edit_ministry_report_path(@ministry_report) %> |
+<%= link_to 'Back', ministry_reports_path %>

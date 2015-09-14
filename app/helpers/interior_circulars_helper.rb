@@ -1,0 +1,2 @@
+module InteriorCircularsHelper
+end

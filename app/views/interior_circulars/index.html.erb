@@ -1,0 +1,29 @@
+<h1>Listing interior_circulars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Subject</th>
+      <th>Date issued</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interior_circulars.each do |interior_circular| %>
+      <tr>
+        <td><%= interior_circular.number %></td>
+        <td><%= interior_circular.subject %></td>
+        <td><%= interior_circular.date_issued %></td>
+        <td><%= link_to 'Show', interior_circular %></td>
+        <td><%= link_to 'Edit', edit_interior_circular_path(interior_circular) %></td>
+        <td><%= link_to 'Destroy', interior_circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interior circular', new_interior_circular_path %>

@@ -1,0 +1,29 @@
+<h1>Listing ministry_reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Subject</th>
+      <th>Date issued</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ministry_reports.each do |ministry_report| %>
+      <tr>
+        <td><%= ministry_report.number %></td>
+        <td><%= ministry_report.subject %></td>
+        <td><%= ministry_report.date_issued %></td>
+        <td><%= link_to 'Show', ministry_report %></td>
+        <td><%= link_to 'Edit', edit_ministry_report_path(ministry_report) %></td>
+        <td><%= link_to 'Destroy', ministry_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ministry report', new_ministry_report_path %>

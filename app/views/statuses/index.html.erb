@@ -1,0 +1,27 @@
+<h1>Listing statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status update</th>
+      <th>Status title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @statuses.each do |status| %>
+      <tr>
+        <td><%= status.status_update %></td>
+        <td><%= status.status_title %></td>
+        <td><%= link_to 'Show', [@project, status] %></td>
+        <td><%= link_to 'Edit', edit_project_status_path(@project, status) %></td>
+        <td><%= link_to 'Destroy', [@project, status], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Status', new_project_status_path(@project, @status) %>

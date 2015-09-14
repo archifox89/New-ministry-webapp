@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profile, :dependent => :destroy
-  has_many :teams, :dependent => :destroy
+  has_and_belongs_to_many :teams, :dependent => :destroy
+  has_many :statuses, :dependent => :destroy
 
 
 end

@@ -1,0 +1,33 @@
+<%= bootstrap_form_for(@admin_circular, :html => { :multipart => true }, layout: :horizontal) do |f| %>
+
+  <% if @admin_circular.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_circular.errors.count, "error") %> prohibited this admin_circular from being saved:</h2>
+
+      <ul>
+      <% @admin_circular.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+ 
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+
+    <%= f.date_select :date_issued %>
+  </div>
+  <div class="actions">
+    <%= f.file_field(:report) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

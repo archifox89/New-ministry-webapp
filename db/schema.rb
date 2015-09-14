@@ -11,7 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901104319) do
+ActiveRecord::Schema.define(version: 20150910104408) do
+
+  create_table "admin_circulars", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
+
+  create_table "admin_reports", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
+
+  create_table "circulars", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -29,6 +65,66 @@ ActiveRecord::Schema.define(version: 20150901104319) do
 
   add_index "experiences", ["profile_id"], name: "index_experiences_on_profile_id"
   add_index "experiences", ["user_id"], name: "index_experiences_on_user_id"
+
+  create_table "exterior_reports", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
+
+  create_table "interior_circulars", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
+
+  create_table "interior_reports", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
+
+  create_table "ministry_reports", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+  end
 
   create_table "months", force: true do |t|
     t.string   "month_range"
@@ -106,10 +202,36 @@ ActiveRecord::Schema.define(version: 20150901104319) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "team_id"
+    t.integer  "user_id"
   end
 
   add_index "projects", ["picture_id"], name: "index_projects_on_picture_id"
   add_index "projects", ["team_id"], name: "index_projects_on_team_id"
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+
+  create_table "reports", force: true do |t|
+    t.string   "number"
+    t.string   "subject"
+    t.date     "date_issued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+  end
+
+  create_table "statuses", force: true do |t|
+    t.text     "status_update"
+    t.string   "status_title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "project_id"
+    t.integer  "user_id"
+  end
+
+  add_index "statuses", ["project_id"], name: "index_statuses_on_project_id"
+  add_index "statuses", ["user_id"], name: "index_statuses_on_user_id"
 
   create_table "teams", force: true do |t|
     t.integer  "user_id"

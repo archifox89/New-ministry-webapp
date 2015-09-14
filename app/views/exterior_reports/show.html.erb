@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @exterior_report.number %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @exterior_report.subject %>
+</p>
+
+<p>
+  <strong>Date issued:</strong>
+  <%= @exterior_report.date_issued %>
+</p>
+
+<%= link_to 'Edit', edit_exterior_report_path(@exterior_report) %> |
+<%= link_to 'Back', exterior_reports_path %>

@@ -15,10 +15,8 @@ class TeamsController < ApplicationController
   def new
     @project = Project.find(params[:project_id])
     @team = @project.teams.new
-    respond_with(@team)
+
   end
-
-
 
   def edit
     
@@ -36,15 +34,16 @@ class TeamsController < ApplicationController
   end
 
 
-
   def update
     @team.update(team_params)
-    respond_with(@team)
+    if @team.save
+      redirect_to @project, :notice => "Team Updated"
+    end
   end
 
   def destroy
     @team.destroy
-    respond_with(@team)
+    redirect_to @project, :notice => "Removed from Project"
   end
 
   private
@@ -57,6 +56,6 @@ class TeamsController < ApplicationController
     end 
 
     def team_params
-      params.require(:team).permit(:id, :user_id, :member, :role, :project_id, )
+      params.require(:team).permit(:id, :user_id, :member, :role, :project_id )
     end
 end

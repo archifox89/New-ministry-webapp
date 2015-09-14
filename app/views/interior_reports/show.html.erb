@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @interior_report.number %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @interior_report.subject %>
+</p>
+
+<p>
+  <strong>Date issued:</strong>
+  <%= @interior_report.date_issued %>
+</p>
+
+<%= link_to 'Edit', edit_interior_report_path(@interior_report) %> |
+<%= link_to 'Back', interior_reports_path %>

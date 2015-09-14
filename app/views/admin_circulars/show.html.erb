@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @admin_circular.number %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @admin_circular.subject %>
+</p>
+
+<p>
+  <strong>Date issued:</strong>
+  <%= @admin_circular.date_issued %>
+</p>
+
+<%= link_to 'Edit', edit_admin_circular_path(@admin_circular) %> |
+<%= link_to 'Back', admin_circulars_path %>

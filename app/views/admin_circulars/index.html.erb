@@ -1,0 +1,29 @@
+<h1>Listing admin_circulars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Subject</th>
+      <th>Date issued</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_circulars.each do |admin_circular| %>
+      <tr>
+        <td><%= admin_circular.number %></td>
+        <td><%= admin_circular.subject %></td>
+        <td><%= admin_circular.date_issued %></td>
+        <td><%= link_to 'Show', admin_circular %></td>
+        <td><%= link_to 'Edit', edit_admin_circular_path(admin_circular) %></td>
+        <td><%= link_to 'Destroy', admin_circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin circular', new_admin_circular_path %>

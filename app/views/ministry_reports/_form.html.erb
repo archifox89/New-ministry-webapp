@@ -1,0 +1,32 @@
+<%= bootstrap_form_for(@ministry_report, :html => { :multipart => true }, layout: :horizontal) do |f| %>
+  <% if @ministry_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ministry_report.errors.count, "error") %> prohibited this ministry_report from being saved:</h2>
+
+      <ul>
+      <% @ministry_report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+
+    <%= f.date_select :date_issued %>
+  </div>
+  <div class="actions">
+    <%= f.file_field(:report) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

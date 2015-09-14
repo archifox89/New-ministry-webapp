@@ -1,0 +1,32 @@
+<div class="report-buttons">
+  <div class="btn-group" role="group" aria-label="...">
+    <%= link_to "Interior Reports", project_docs_path, class: "btn btn-default" %>
+    <%= link_to "Exterior Reports", exterior_reports_path, class: "btn btn-default" %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10">
+    <h3>Exterior Reports</h3>
+    <table class="table table-striped">
+      <tr>
+        <th>Number</th>
+        <th>Subject</th>
+        <th>Date Issued</th>
+        <th>View / Download</th>
+        <th>Actions</th>
+      </tr>
+      <% @exterior_reports.each do |exterior_report| %>
+        <tr>
+          <td>#&nbsp;<%= exterior_report.number %></td>
+          <td><%= exterior_report.subject %></td>
+          <td><%= exterior_report.date_issued %></td>
+          <td><%=  link_to 'Download file', exterior_report.report.url, target: "_blank" %></td>
+          <td><%= link_to 'Edit', edit_exterior_report_path(exterior_report) %> | <%= link_to 'Delete', exterior_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+    <div class="add-report">
+      <%= link_to "Add Report", new_exterior_report_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>

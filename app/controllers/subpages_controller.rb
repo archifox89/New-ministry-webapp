@@ -20,7 +20,7 @@ class SubpagesController < ApplicationController
   def archive
   end
 
-  def presignature2
+  def monthly_template
   end
 
   def development2

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @admin_report.number %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @admin_report.subject %>
+</p>
+
+<p>
+  <strong>Date issued:</strong>
+  <%= @admin_report.date_issued %>
+</p>
+
+<%= link_to 'Edit', edit_admin_report_path(@admin_report) %> |
+<%= link_to 'Back', admin_reports_path %>

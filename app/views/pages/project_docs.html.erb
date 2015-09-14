@@ -1,165 +1,209 @@
-<h2>تقارير و تعاميم</h2>
-<h3>2015</h3>
-
+<div class="report-buttons">
+  <div class="btn-group" role="group" aria-label="...">
+    <%= link_to "Interior Reports", project_docs_path, class: "btn btn-default" %>
+    <%= link_to "Exterior Reports", exterior_reports_path, class: "btn btn-default" %>
+  </div>
+</div>
+<h3>Interior Reports</h3>
 <div class="row">
-	<div class="col-md-offset-1 col-md-10">
 
-		<table class="table table-striped">
-      <tr>
-        <th>Number</th>
-        <th>Subject</th>
-        <th>Date Issued</th>
-        <th>View</th>
-        <th>Download</th>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-    </table>
 
-    <h3>2014</h3>
+      <!-- Nav tabs -->
+      <div class="tab-link-color">
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active"><a href="#admin-circular" aria-controls="admin-circular" role="tab" data-toggle="tab">تعميم اداري</a></li>
+        <li role="presentation"><a href="#admin-report" aria-controls="admin-report" role="tab" data-toggle="tab">قرار اداري</a></li>
+        <li role="presentation"><a href="#circular" aria-controls="circular" role="tab" data-toggle="tab">تعميم</a></li>
+        <li role="presentation"><a href="#interior-report" aria-controls="interior-report" role="tab" data-toggle="tab">منشور داخلي</a></li>
+        <li role="presentation"><a href="#message" aria-controls="message" role="tab" data-toggle="tab">مراسلات</a></li>
+        <li role="presentation"><a href="#ministry-report" aria-controls="ministry" role="tab" data-toggle="tab">قرار وزاري</a></li>
+        <li role="presentation"><a href="#report" aria-controls="report" role="tab" data-toggle="tab">قرار</a></li>
+      </div>
 
-    <table class="table table-striped">
-      <tr>
-        <th>Number</th>
-        <th>Subject</th>
-        <th>Date Issued</th>
-        <th>View</th>
-        <th>Download</th>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-    </table>
 
-     <h3>2013</h3>
+      <!-- Tab panes -->
+        <div class="col-md-offset-1 col-md-10">
+    <div role="tabpanel">
+      <div class="tab-content">
 
-    <table class="table table-striped">
-      <tr>
-        <th>Number</th>
-        <th>Subject</th>
-        <th>Date Issued</th>
-        <th>View</th>
-        <th>Download</th>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-      </tr>
-      <td>1030</td>
-        <td><h4>صرف المزايا العينية للسنة المالسة 2016/2017</h4></td>
-        <td>12/4/2015</td>
-        <td><%= link_to "View Report", "#", class: 'link-color' %></td>
-        <td><%= link_to "Download Report", "#", class: 'link-color' %></td>
-      </tr>
-    </table>
+       <div role="tabpanel" class="tab-pane active" id="admin-circular">
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Subject</th>
+              <th>Date Issued</th>
+              <th>View / Download</th>
+              <th>Actions</th>
+            </tr>
 
+            <% @admin_circulars.each do |admin_circular| %>
+              <tr>
+                <td>#&nbsp;<%= admin_circular.number %></td>
+                <td><%= admin_circular.subject %></td>
+                <td><%= admin_circular.date_issued %></td>
+                <td><%=  link_to 'Download file', admin_circular.report.url, target: "_blank" %></td>
+                <td><%= link_to 'Edit', edit_admin_circular_path(admin_circular) %> | <%= link_to 'Delete', admin_circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Report", new_admin_circular_path, class: 'btn btn-primary' %>
+          </div>
+        </div>
+
+      <div role="tabpanel" class="tab-pane" id="admin-report">
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Subject</th>
+              <th>Date Issued</th>
+              <th>View / Download</th>
+              <th>Actions</th>
+            </tr>
+
+            <% @admin_reports.each do |admin_report| %>
+              <tr>
+                <td>#&nbsp;<%= admin_report.number %></td>
+                <td><%= admin_report.subject %></td>
+                <td><%= admin_report.date_issued %></td>
+                <td><%=  link_to 'Download file', admin_report.report.url, target: "_blank" %></td>
+                <td><%= link_to 'Edit', edit_admin_report_path(admin_report) %> | <%= link_to 'Delete', admin_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Report", new_admin_report_path, class: 'btn btn-primary' %>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="circular">
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Subject</th>
+              <th>Date Issued</th>
+              <th>View / Download</th>
+              <th>Actions</th>
+            </tr>
+
+            <% @circulars.each do |circular| %>
+              <tr>
+                <td>#&nbsp;<%= circular.number %></td>
+                <td><%= circular.subject %></td>
+                <td><%= circular.date_issued %></td>
+                <td><%=  link_to 'Download file', circular.report.url, target: "_blank" %></td>
+                <td><%= link_to 'Edit', edit_circular_path(circular) %> | <%= link_to 'Delete', circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Report", new_circular_path, class: 'btn btn-primary' %>
+          </div>
+        </div>
+        
+        
+
+         <div role="tabpanel" class="tab-pane" id="interior-report">
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Subject</th>
+              <th>Date Issued</th>
+              <th>View / Download</th>
+              <th>Actions</th>
+            </tr>
+
+            <% @interior_reports.each do |interior_report| %>
+              <tr>
+                <td>#&nbsp;<%= interior_report.number %></td>
+                <td><%= interior_report.subject %></td>
+                <td><%= interior_report.date_issued %></td>
+                <td><%=  link_to 'Download file', interior_report.report.url, target: "_blank" %></td>
+                <td><%= link_to 'Edit', edit_interior_report_path(interior_report) %> | <%= link_to 'Delete', interior_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Report", new_interior_report_path, class: 'btn btn-primary' %>
+          </div>
+        </div>
+
+          <div role="tabpanel" class="tab-pane" id="message">
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Subject</th>
+              <th>Date Issued</th>
+              <th>View / Download</th>
+              <th>Actions</th>
+            </tr>
+
+            <% @messages.each do |message| %>
+              <tr>
+                <td>#&nbsp;<%= message.number %></td>
+                <td><%= message.subject %></td>
+                <td><%= message.date_issued %></td>
+                <td><%=  link_to 'Download file', message.report.url, target: "_blank" %></td>
+                <td><%= link_to 'Edit', edit_message_path(message) %> | <%= link_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Report", new_message_path, class: 'btn btn-primary' %>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="ministry-report">
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Subject</th>
+              <th>Date Issued</th>
+              <th>View / Download</th>
+              <th>Actions</th>
+            </tr>
+
+            <% @ministry_reports.each do |ministry_report| %>
+              <tr>
+                <td>#&nbsp;<%= ministry_report.number %></td>
+                <td><%= ministry_report.subject %></td>
+                <td><%= ministry_report.date_issued %></td>
+                <td><%=  link_to 'Download file', ministry_report.report.url, target: "_blank" %></td>
+                <td><%= link_to 'Edit', edit_ministry_report_path(ministry_report) %> | <%= link_to 'Delete', ministry_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Report", new_ministry_report_path, class: 'btn btn-primary' %>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="report">
+          <table class="table table-striped">
+            <tr>
+              <th>Number</th>
+              <th>Subject</th>
+              <th>Date Issued</th>
+              <th>View / Download</th>
+              <th>Actions</th>
+            </tr>
+
+            <% @reports.each do |report| %>
+              <tr>
+                <td>#&nbsp;<%= report.number %></td>
+                <td><%= report.subject %></td>
+                <td><%= report.date_issued %></td>
+                <td><%=  link_to 'Download file', report.file.url, target: "_blank" %></td>
+                <td><%= link_to 'Edit', edit_report_path(report) %> | <%= link_to 'Delete', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </table>
+          <div class="add-report">
+            <%= link_to "Add Report", new_report_path, class: 'btn btn-primary' %>
+          </div>
+        </div>
+
+      </div> 
+    </div>
   </div>
 </div>

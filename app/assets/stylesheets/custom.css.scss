@@ -18,7 +18,7 @@
 }
 
 
- .pages, .subpages, .sessions, .registrations, .profiles, .vacations, .projects, .teams, .months {
+ .pages, .subpages, .sessions, .registrations, .profiles, .vacations, .projects, .teams, .months, .statuses, .admin_circulars, .admin_reports, .circulars, .interior_circulars, .exterior_reports, .interior_reports, .messages, .ministry_reports, .reports {
  		margin-left: auto;
  		margin-right: auto;
  		width: 1250px;
@@ -47,7 +47,7 @@
 	  	text-decoration: underline;
 	  }
 
-	.project_docs h2 {
+.project_docs h2 {
 			margin-top: 30px;
 	  	text-align: center;
 	  	font-size: 2em;
@@ -55,7 +55,7 @@
 	  	text-decoration: underline;
 }
 
-	.project_docs h3 {
+.project_docs h3 {
 			margin-top: 30px;
 	  	text-align: center;
 	  	margin-bottom: 30px;
@@ -86,13 +86,25 @@
 	  	text-decoration: underline;
 	  }
 
-	
+.exterior_reports h3  {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 1.7em;
+	margin-bottom: 30px;
+}
 
+.monthly_template h3  {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 1.7em;
+	margin-bottom: 50px;
+}
 
 .nav {
-	padding-top: 20px;
+	padding-top: 0px;
 	padding-right: 150px;
 	padding-left: 150px;
+
 }
 
 
@@ -182,6 +194,34 @@ margin: 50px auto 0 auto;
 	
 color: white;
 font-size: 12pt;
-font-weight: bold;
 
+
+}
+
+
+.report-buttons {
+	margin-left: 400px;
+
+}
+
+
+
+.report-buttons .btn {
+display: block;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 200px;
+
+
+}
+
+
+.contact-padding {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.tab-link-color a {
+font-size: 1.3em;
+color: #555555;
 }

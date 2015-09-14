@@ -5,11 +5,11 @@ class MonthsController < ApplicationController
 
   def index
     @months = Month.all
-
+    respond_with(@month)
   end
 
   def show
-
+    respond_with(@month)
   end
 
   def new
@@ -23,7 +23,6 @@ class MonthsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @month = @project.months.build(month_params)
-    @month.save
     if @month.save
       redirect_to @project, notice: 'Successfully Added Monthly Report'
     else

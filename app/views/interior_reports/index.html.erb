@@ -1,0 +1,29 @@
+<h1>Listing interior_reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Subject</th>
+      <th>Date issued</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interior_reports.each do |interior_report| %>
+      <tr>
+        <td><%= interior_report.number %></td>
+        <td><%= interior_report.subject %></td>
+        <td><%= interior_report.date_issued %></td>
+        <td><%= link_to 'Show', interior_report %></td>
+        <td><%= link_to 'Edit', edit_interior_report_path(interior_report) %></td>
+        <td><%= link_to 'Destroy', interior_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interior report', new_interior_report_path %>

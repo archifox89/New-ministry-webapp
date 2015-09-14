@@ -6,6 +6,14 @@ class PagesController < ApplicationController
   end
 
   def project_docs
+    @admin_circulars = AdminCircular.all
+    @admin_reports = AdminReport.all
+    @circulars = Circular.all
+    @exterior_reports = ExteriorReport.all
+    @interior_reports = InteriorReport.all
+    @messages = Message.all
+    @ministry_reports = MinistryReport.all
+    @reports = Report.all
   end
 
   def search
