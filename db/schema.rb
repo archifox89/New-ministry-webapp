@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910104408) do
+ActiveRecord::Schema.define(version: 20150914074951) do
 
   create_table "admin_circulars", force: true do |t|
     t.string   "number"
@@ -203,9 +203,11 @@ ActiveRecord::Schema.define(version: 20150910104408) do
     t.datetime "image_updated_at"
     t.integer  "team_id"
     t.integer  "user_id"
+    t.integer  "status_id"
   end
 
   add_index "projects", ["picture_id"], name: "index_projects_on_picture_id"
+  add_index "projects", ["status_id"], name: "index_projects_on_status_id"
   add_index "projects", ["team_id"], name: "index_projects_on_team_id"
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"
 

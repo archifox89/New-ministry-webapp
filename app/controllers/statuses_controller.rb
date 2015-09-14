@@ -52,6 +52,6 @@ class StatusesController < ApplicationController
     end 
 
     def status_params
-      params.require(:status).permit(:status_update, :status_title, :user_id)
+      params.require(:status).permit(:status_update, :status_title, :user_id, :status_id)
     end
 end
