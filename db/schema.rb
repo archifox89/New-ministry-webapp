@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914083405) do
+ActiveRecord::Schema.define(version: 20150914095349) do
 
   create_table "admin_circulars", force: true do |t|
     t.string   "number"
@@ -196,10 +196,6 @@ ActiveRecord::Schema.define(version: 20150914083405) do
     t.string   "design_cost"
     t.string   "execution_cost"
     t.date     "signature_date"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
     t.integer  "team_id"
     t.integer  "user_id"
     t.integer  "status_id"
