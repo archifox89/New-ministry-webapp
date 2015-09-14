@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914074951) do
+ActiveRecord::Schema.define(version: 20150914083405) do
 
   create_table "admin_circulars", force: true do |t|
     t.string   "number"
@@ -176,7 +176,6 @@ ActiveRecord::Schema.define(version: 20150914074951) do
   create_table "projects", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "status"
     t.string   "phase"
     t.string   "location"
     t.datetime "created_at"

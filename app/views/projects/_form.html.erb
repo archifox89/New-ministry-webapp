@@ -21,7 +21,6 @@
       </div>
     <div class="panel-body">
       <%= f.text_field :title %>
-      <%= f.select :status, [["Active"], ["On Hiatus"]], { label: "Status"}, { class: "selectpicker" } %>
       <%= f.select :phase, [["Phase 1"], ["Phase 2"], ["Phase 3"]],  { label: "Phase"}, { class: "selectpicker" } %>
       <%= f.text_field :location %>
       <%= f.number_field :area, label: "Area (m2)" %>
