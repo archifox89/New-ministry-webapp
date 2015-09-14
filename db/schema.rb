@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914101742) do
+ActiveRecord::Schema.define(version: 20150914102602) do
 
   create_table "admin_circulars", force: true do |t|
     t.string   "number"
@@ -135,7 +135,7 @@ ActiveRecord::Schema.define(version: 20150914101742) do
     t.integer  "report_file_size"
     t.datetime "report_updated_at"
     t.integer  "project_id"
-    t.date     "month_range"
+    t.date     "month_time"
   end
 
   add_index "months", ["project_id"], name: "index_months_on_project_id"

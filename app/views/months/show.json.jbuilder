@@ -1,1 +1,1 @@
-json.extract! @month, :id, :month_range, :phase, :created_at, :updated_at
+json.extract! @month, :id, :month_time, :phase, :created_at, :updated_at

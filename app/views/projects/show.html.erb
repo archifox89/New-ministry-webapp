@@ -155,7 +155,7 @@
       <% @project.months.each do |month| %>
         <tr>
           <td>#&nbsp;<%= month.id %></td>
-          <td><%= month.month_range %></td>
+          <td><%= month.month_time %></td>
           <td><%= month.phase %></td>
           <td><%=  link_to 'Download file', month.report.url, target: "_blank" %></td>
         </tr>

@@ -50,6 +50,6 @@ class MonthsController < ApplicationController
     end 
 
     def month_params
-      params.require(:month).permit(:month_range, :phase, :project_id, :report)
+      params.require(:month).permit(:month_time, :phase, :project_id, :report)
     end
 end

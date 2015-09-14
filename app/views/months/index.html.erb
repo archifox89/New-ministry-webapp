@@ -12,7 +12,7 @@
   <tbody>
     <% @months.each do |month| %>
       <tr>
-        <td><%= month.month_range %></td>
+        <td><%= month.month_time %></td>
         <td><%= month.phase %></td>
         <td><%= link_to 'Show', [@project, month] %></td>
         <td><%= link_to 'Edit', edit_project_month_path(@project, month) %></td>
