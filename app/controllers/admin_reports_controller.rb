@@ -32,7 +32,7 @@ class AdminReportsController < ApplicationController
 
   def update
     @admin_report.update(admin_report_params)
-    redirect_to project_docs_path, :notice => "Report Deleted"
+    redirect_to project_docs_path, :notice => "Report Updated"
   end
 
   def destroy

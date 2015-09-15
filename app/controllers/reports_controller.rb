@@ -31,12 +31,12 @@ class ReportsController < ApplicationController
 
   def update
     @report.update(report_params)
-    redirect_to project_docs_path, :notice => "Report Deleted"
+    redirect_to project_docs_path, :notice => "Report Updated"
   end
 
   def destroy
     @report.destroy
-    redirect_to project_docs_path, :notice => "Report Deleted"
+    redirect_to project_docs_path, :notice => "Report Updated"
   end
 
   private

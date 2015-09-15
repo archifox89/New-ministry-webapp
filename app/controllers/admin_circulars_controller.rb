@@ -31,7 +31,7 @@ class AdminCircularsController < ApplicationController
 
   def update
     @admin_circular.update(admin_circular_params)
-    redirect_to project_docs_path, :notice => "Report Deleted"
+    redirect_to project_docs_path, :notice => "Report Updated"
   end
 
   def destroy

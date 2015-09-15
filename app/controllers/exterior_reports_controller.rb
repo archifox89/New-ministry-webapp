@@ -23,7 +23,7 @@ class ExteriorReportsController < ApplicationController
   def create
     @exterior_report = ExteriorReport.new(exterior_report_params)
     if @exterior_report.save
-      redirect_to project_docs_path, notice: 'Successfully Added Report'
+      redirect_to exterior_reports_path, notice: 'Successfully Added Report'
     else
       render action: 'new'
     end
@@ -31,7 +31,7 @@ class ExteriorReportsController < ApplicationController
 
   def update
     @exterior_report.update(exterior_report_params)
-    redirect_to exterior_reports_path, :notice => "Report Deleted"
+    redirect_to exterior_reports_path, :notice => "Report Updated"
   end
 
   def destroy

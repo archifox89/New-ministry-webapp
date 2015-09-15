@@ -31,7 +31,7 @@ class InteriorReportsController < ApplicationController
 
   def update
     @interior_report.update(interior_report_params)
-    redirect_to project_docs_path, :notice => "Report Deleted"
+    redirect_to project_docs_path, :notice => "Report Updated"
   end
 
   def destroy

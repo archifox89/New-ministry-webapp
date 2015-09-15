@@ -31,7 +31,7 @@ class InteriorCircularsController < ApplicationController
 
   def update
     @interior_circular.update(interior_circular_params)
-    redirect_to project_docs_path, :notice => "Report Deleted"
+    redirect_to project_docs_path, :notice => "Report Updated"
   end
 
   def destroy
