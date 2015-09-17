@@ -10,11 +10,11 @@
 - [x] Change Data type for **:subject** to  text_area
 - [x] Make width for subject column fixed
 	- [x] Specify **max-width**
-- [ ] Add icons for download **Edit, Download, and Delete**
-- [ ] Remove the actions column and view / Download Column
-- [ ] Make the subject column apear first and on the right (for arabic formatting)
+- [x] Add icons for download **Edit, Download, and Delete**
+- [x] Remove the actions column and view / Download Column
+- [x] Make the subject column apear first and on the right (for arabic formatting)
 - [ ] Make sure only **users who upload** the files and **admin** can delete and edit the input
-- [ ] Add a column for (upload date) and (upload by)
+- [x] Add a column for (upload date) and (upload by)
 - [ ] Make inputs appear in **descending** order according to **:date_issued**
 - [ ] Changing input method for dates to make a calender appear
 - [ ] When icons are highlighted, make a popup appear explaining what it does
