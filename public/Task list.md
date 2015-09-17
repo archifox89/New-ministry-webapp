@@ -1,4 +1,4 @@
-# ++Ministry Web Application Notes++
+# Ministry Web Application Notes
 
 
 #### Project Documents
@@ -6,7 +6,7 @@
 
 - - -
 
-++Tasks:++
+Tasks:
 
 - [ ] Make text input bilingual (arabic and english)
 - [ ] Change Data type for **:subject** to  text
@@ -29,7 +29,7 @@
 	- [ ] add an option to filter the exterior reports according to where they are from
 
 
-++Optional features:++
+Optional features:
 
 - [ ] Allow a preview of the document to appear in the same page with a preview icon
 
