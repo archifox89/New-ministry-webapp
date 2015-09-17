@@ -6,8 +6,6 @@
 
 - - -
 
-**Tasks:**
-
 - [ ] Make text input bilingual (arabic and english)
 - [ ] Change Data type for **:subject** to  text
 - [ ] Make width for subject column fixed
