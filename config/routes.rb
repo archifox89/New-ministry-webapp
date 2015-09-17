@@ -58,7 +58,7 @@ end
   get "phase4" => "subpages#phase4" 
   get "proposed2" => "subpages#proposed2" 
 
-
+get '/tasks', :to => redirect('/tasks.html')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
