@@ -7,9 +7,9 @@
 - - -
 
 - [ ] ~~Make text input bilingual (arabic and english)~~
-- [ ] Change Data type for **:subject** to  text
-- [ ] Make width for subject column fixed
-	- [ ] Specify **max-width**
+- [x] Change Data type for **:subject** to  text_area
+- [x] Make width for subject column fixed
+	- [x] Specify **max-width**
 - [ ] Add icons for download **Edit, Download, and Delete**
 - [ ] Remove the actions column and view / Download Column
 - [ ] Make the subject column apear first and on the right (for arabic formatting)
