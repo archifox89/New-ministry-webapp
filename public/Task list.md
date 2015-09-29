@@ -1,10 +1,10 @@
 # Ministry Web Application Notes
 
-## Main Tasks
+#### Main Tasks
 
 - - - 
 
-- [ ] 1) Add Search Feature to:
+- [ ] **1) Add Search Feature to:**
 
 - [ ]	1. Projects
 	* by Name 
@@ -22,7 +22,7 @@
 	* by folder number
 	* by civil id
 		
-- [ ] 2) Add Sort + Filter Feature to:
+- [ ] **2) Add Sort + Filter Feature to:**
 
 - [ ]	1. Projects (ascending + descending)
 	* by size
@@ -42,26 +42,25 @@
 	* by Nationality
 		
 
-- [ ] 3) Add employees index section (only for admin access):
+- [ ] **3) Add employees index section (only for admin access):**
  
 - [ ] add search, sort and filter to employee index
 
-4) Add announcements feature to main page
+- [ ] **4) Add announcements feature to main page**
 
 - [ ] create announcement scaffold
 - [ ] when new announecments appear, make "new" show. and then it dissapears after page is refreshed
 
-5) add personal notifications and messages
+- [ ] **5) add personal notifications and messages**
 - [ ] make ability to send personal notifications to specific employees
 - [ ] send an email to users who get a personal notification
 
-6) add authorization and user groups and privelages (admin and general user)
+- [ ] **6) add authorization and user groups and privelages (admin and general user)**
 
-7) add a calender showing main upcoming events in department
+- [ ] **7) add a calender showing main upcoming events in department**
 
 
 #### Project Documents
-
 
 - - -
 
@@ -113,3 +112,7 @@
 - [ ] group status updates by month 
 - [ ] add documents to project report
 
+#### Employee profile
+
+- [ ] add correct levels
+- [ ] add correct employment titles
