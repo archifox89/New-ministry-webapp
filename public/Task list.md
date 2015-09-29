@@ -87,7 +87,7 @@
 
 **Optional features:**
 
-		- [ ] Allow a preview of the document to appear in the same page with a preview icon
+- [ ] Allow a preview of the document to appear in the same page with a preview icon
 
 
 #### Monthly Report (project docs)
