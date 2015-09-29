@@ -5,8 +5,9 @@
 - - - 
 
 1) Add Search Feature to:
+
 	1. Projects
-		*by Name 
+		* by Name 
 		* by Client
 		* by Designer
 		* by Contractor
@@ -42,7 +43,8 @@
 		
 
 3) Add employees index section (only for admin access):
-	* add search, sort and filter to employee index
+
+	*add search, sort and filter to employee index
 
 
 
