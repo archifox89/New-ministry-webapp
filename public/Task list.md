@@ -92,12 +92,16 @@
 
 #### Monthly Report (project docs)
 
+- - -
+
 - [ ] add blank document for each report type
 - [ ] get description for when to use each report type (ahmad isma3eel)
 - [ ] add seciton showing when to submit taqareer mo5ta9ara
 - [ ] create 2 groups for contact information: our department and ta56ee6 and motaba3a
 
 #### Projects 
+
+- - -
 
 - [ ] add section (liscences and approvals)
 - [ ] talk to may about project sections
@@ -113,6 +117,8 @@
 - [ ] add documents to project report
 
 #### Employee profile
+
+- - -
 
 - [ ] add correct levels
 - [ ] add correct employment titles
