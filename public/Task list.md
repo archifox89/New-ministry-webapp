@@ -82,6 +82,7 @@
 	- [ ] Make it so their is a select box with the most common selections
 	- [ ] Incase the location is not listed, add a **other** option which renders a blank text feild 
 	- [ ] add an option to filter the exterior reports according to where they are from
+- [ ] make interior and exterior report buttons appear selected to show active page
 
 
 **Optional features:**
