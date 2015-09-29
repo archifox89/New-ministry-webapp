@@ -6,7 +6,7 @@
 
 1) Add Search Feature to:
 	1. Projects
-		* by Name 
+		*by Name 
 		* by Client
 		* by Designer
 		* by Contractor
