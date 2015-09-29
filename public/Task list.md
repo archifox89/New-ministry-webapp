@@ -1,5 +1,50 @@
 # Ministry Web Application Notes
 
+## Main Tasks
+
+- - - 
+
+1) Add Search Feature to:
+	1. Projects
+		* by Name 
+		* by Client
+		* by Designer
+		* by Contractor
+		* by Location
+
+	2. Project Documents
+		* by number
+		* by subject name
+
+	3. Employees
+		* by name
+		* by folder number
+		* by civil id
+		
+2) Add Sort + Filter Feature to:
+
+	1. Projects (ascending + descending)
+		* by size
+		* by date 
+		* by oldest
+		* by budget 
+		* by type?
+		
+	2. Project Documents
+		* by month range
+		* by number
+		* by subject name
+		
+	3. Employees
+		* by level
+		* by Gender
+		* by Nationality
+		
+
+3) Add employees index section (only for admin access):
+	* add search, sort and filter to employee index
+
+
 
 #### Project Documents
 
