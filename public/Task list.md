@@ -1,4 +1,3 @@
-# Ministry Web Application Notes
 
 #### Main Tasks
 
