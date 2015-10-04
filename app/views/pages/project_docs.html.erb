@@ -30,19 +30,27 @@
           <table class="table table-striped">
             <tr>
               <th>Number</th>
-              <th>Subject</th>
               <th>Date Issued</th>
-              <th>View / Download</th>
-              <th>Actions</th>
+              <th>Date Uploaded</th>
+              <th>Subject</th>
+              <th></th>
             </tr>
 
             <% @admin_circulars.each do |admin_circular| %>
               <tr>
-                <td>#&nbsp;<%= admin_circular.number %></td>
-                <td><%= admin_circular.subject %></td>
-                <td><%= admin_circular.date_issued %></td>
-                <td><%=  link_to 'Download file', admin_circular.report.url, target: "_blank" %></td>
-                <td><%= link_to 'Edit', edit_admin_circular_path(admin_circular) %> | <%= link_to 'Delete', admin_circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= admin_circular.number %></td>
+                <td><%= admin_circular.date_issued.strftime("%D") %></td>
+                <td><%= admin_circular.created_at.strftime("%D") %></td>
+                <td><div class="arabic-subject"><%= admin_circular.subject %></div></td>
+                <td><% if admin_circular.user == current_user %>
+                <%= link_to edit_admin_circular_path(admin_circular), target: "_blank" do %>
+              <i class="fa fa-pencil"></i>
+              <% end %> | <%= link_to admin_circular, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-trash-o"></i>
+              <% end %> |
+              <% end %> <%= link_to admin_circular.report.url, target: "_blank" do %> 
+                <i class="fa fa-download"></i>
+              <% end %></td>
               </tr>
             <% end %>
           </table>
@@ -55,19 +63,27 @@
           <table class="table table-striped">
             <tr>
               <th>Number</th>
-              <th>Subject</th>
               <th>Date Issued</th>
-              <th>View / Download</th>
-              <th>Actions</th>
+              <th>Date Uploaded</th>
+              <th>Subject</th>
+              <th></th>
             </tr>
 
             <% @admin_reports.each do |admin_report| %>
               <tr>
-                <td>#&nbsp;<%= admin_report.number %></td>
-                <td><%= admin_report.subject %></td>
-                <td><%= admin_report.date_issued %></td>
-                <td><%=  link_to 'Download file', admin_report.report.url, target: "_blank" %></td>
-                <td><%= link_to 'Edit', edit_admin_report_path(admin_report) %> | <%= link_to 'Delete', admin_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+               <td><%= admin_report.number %></td>
+                <td><%= admin_report.date_issued.strftime("%D") %></td>
+                <td><%= admin_report.created_at.strftime("%D") %></td>
+                <td><div class="arabic-subject"><%= admin_report.subject %></div></td>
+                <td><% if admin_report.user == current_user %>
+                  <%= link_to edit_admin_report_path(admin_report), target: "_blank" do %>
+                <i class="fa fa-pencil"></i>
+                <% end %> | <%= link_to admin_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-trash-o"></i>
+                <% end %> |
+                <% end %> <%= link_to admin_report.report.url, target: "_blank" do %> 
+                  <i class="fa fa-download"></i>
+                <% end %></td>
               </tr>
             <% end %>
           </table>
@@ -80,19 +96,27 @@
           <table class="table table-striped">
             <tr>
               <th>Number</th>
-              <th>Subject</th>
               <th>Date Issued</th>
-              <th>View / Download</th>
-              <th>Actions</th>
+              <th>Date Uploaded</th>
+              <th>Subject</th>
+              <th></th>
             </tr>
 
             <% @circulars.each do |circular| %>
               <tr>
-                <td>#&nbsp;<%= circular.number %></td>
-                <td><%= circular.subject %></td>
-                <td><%= circular.date_issued %></td>
-                <td><%=  link_to 'Download file', circular.report.url, target: "_blank" %></td>
-                <td><%= link_to 'Edit', edit_circular_path(circular) %> | <%= link_to 'Delete', circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+               <td><%= circular.number %></td>
+                <td><%= circular.date_issued.strftime("%D") %></td>
+                <td><%= circular.created_at.strftime("%D") %></td>
+                <td><div class="arabic-subject"><%= circular.subject %></div></td>
+                <td><% if circular.user == current_user %>
+                  <%= link_to edit_circular_path(circular), target: "_blank" do %>
+                <i class="fa fa-pencil"></i>
+                <% end %> | <%= link_to circular, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-trash-o"></i>
+                <% end %> |
+                <% end %> <%= link_to circular.report.url, target: "_blank" do %> 
+                  <i class="fa fa-download"></i>
+                <% end %></td>
               </tr>
             <% end %>
           </table>
@@ -107,19 +131,27 @@
           <table class="table table-striped">
             <tr>
               <th>Number</th>
-              <th>Subject</th>
               <th>Date Issued</th>
-              <th>View / Download</th>
-              <th>Actions</th>
+              <th>Date Uploaded</th>
+              <th>Subject</th>
+              <th></th>
             </tr>
 
             <% @interior_reports.each do |interior_report| %>
               <tr>
-                <td>#&nbsp;<%= interior_report.number %></td>
-                <td><%= interior_report.subject %></td>
-                <td><%= interior_report.date_issued %></td>
-                <td><%=  link_to 'Download file', interior_report.report.url, target: "_blank" %></td>
-                <td><%= link_to 'Edit', edit_interior_report_path(interior_report) %> | <%= link_to 'Delete', interior_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= interior_report.number %></td>
+                <td><%= interior_report.date_issued.strftime("%D") %></td>
+                <td><%= interior_report.created_at.strftime("%D") %></td>
+                <td><div class="arabic-subject"><%= interior_report.subject %></div></td>
+                <td><% if interior_report.user == current_user %>
+                  <%= link_to edit_interior_report_path(interior_report), target: "_blank" do %>
+                <i class="fa fa-pencil"></i>
+                <% end %> | <%= link_to interior_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-trash-o"></i>
+                <% end %> |
+                <% end %> <%= link_to interior_report.report.url, target: "_blank" do %> 
+                  <i class="fa fa-download"></i>
+                <% end %></td>
               </tr>
             <% end %>
           </table>
@@ -132,19 +164,27 @@
           <table class="table table-striped">
             <tr>
               <th>Number</th>
-              <th>Subject</th>
               <th>Date Issued</th>
-              <th>View / Download</th>
-              <th>Actions</th>
+              <th>Date Uploaded</th>
+              <th>Subject</th>
+              <th></th>
             </tr>
 
             <% @messages.each do |message| %>
               <tr>
-                <td>#&nbsp;<%= message.number %></td>
-                <td><%= message.subject %></td>
-                <td><%= message.date_issued %></td>
-                <td><%=  link_to 'Download file', message.report.url, target: "_blank" %></td>
-                <td><%= link_to 'Edit', edit_message_path(message) %> | <%= link_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= message.number %></td>
+                <td><%= message.date_issued.strftime("%D") %></td>
+                <td><%= message.created_at.strftime("%D") %></td>
+                <td><div class="arabic-subject"><%= message.subject %></div></td>
+                <td><% if message.user == current_user %>
+                  <%= link_to edit_message_path(message), target: "_blank" do %>
+                <i class="fa fa-pencil"></i>
+                <% end %> | <%= link_to message, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-trash-o"></i>
+                <% end %> |
+                <% end %> <%= link_to message.report.url, target: "_blank" do %> 
+                  <i class="fa fa-download"></i>
+                <% end %></td>
               </tr>
             <% end %>
           </table>
@@ -157,19 +197,27 @@
           <table class="table table-striped">
             <tr>
               <th>Number</th>
-              <th>Subject</th>
               <th>Date Issued</th>
-              <th>View / Download</th>
-              <th>Actions</th>
+              <th>Date Uploaded</th>
+              <th>Subject</th>
+              <th></th>
             </tr>
 
             <% @ministry_reports.each do |ministry_report| %>
               <tr>
-                <td>#&nbsp;<%= ministry_report.number %></td>
-                <td><%= ministry_report.subject %></td>
-                <td><%= ministry_report.date_issued %></td>
-                <td><%=  link_to 'Download file', ministry_report.report.url, target: "_blank" %></td>
-                <td><%= link_to 'Edit', edit_ministry_report_path(ministry_report) %> | <%= link_to 'Delete', ministry_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= ministry_report.number %></td>
+                <td><%= ministry_report.date_issued.strftime("%D") %></td>
+                <td><%= ministry_report.created_at.strftime("%D") %></td>
+                <td><div class="arabic-subject"><%= ministry_report.subject %></div></td>
+                <td><% if ministry_report.user == current_user %>
+                  <%= link_to edit_ministry_report_path(ministry_report), target: "_blank" do %>
+                <i class="fa fa-pencil"></i>
+                <% end %> | <%= link_to ministry_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-trash-o"></i>
+                <% end %> |
+                <% end %> <%= link_to ministry_report.report.url, target: "_blank" do %> 
+                  <i class="fa fa-download"></i>
+                <% end %></td>
               </tr>
             <% end %>
           </table>
@@ -182,19 +230,27 @@
           <table class="table table-striped">
             <tr>
               <th>Number</th>
-              <th>Subject</th>
               <th>Date Issued</th>
-              <th>View / Download</th>
-              <th>Actions</th>
+              <th>Date Uploaded</th>
+              <th>Subject</th>
+              <th></th>
             </tr>
 
             <% @reports.each do |report| %>
               <tr>
-                <td>#&nbsp;<%= report.number %></td>
-                <td><%= report.subject %></td>
-                <td><%= report.date_issued %></td>
-                <td><%=  link_to 'Download file', report.file.url, target: "_blank" %></td>
-                <td><%= link_to 'Edit', edit_report_path(report) %> | <%= link_to 'Delete', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= report.number %></td>
+                <td><%= report.date_issued.strftime("%D") %></td>
+                <td><%= report.created_at.strftime("%D") %></td>
+                <td><div class="arabic-subject"><%= report.subject %></div></td>
+                <td><% if report.user == current_user %>
+                  <%= link_to edit_report_path(report), target: "_blank" do %>
+                <i class="fa fa-pencil"></i>
+                <% end %> | <%= link_to report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-trash-o"></i>
+                <% end %> |
+                <% end %> <%= link_to report.file.url, target: "_blank" do %> 
+                  <i class="fa fa-download"></i>
+                <% end %></td>
               </tr>
             <% end %>
           </table>

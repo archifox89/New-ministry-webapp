@@ -1,5 +1,6 @@
 class MonthsController < ApplicationController
   before_action :set_month, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
   before_action :set_project
   respond_to :html
 
@@ -23,6 +24,7 @@ class MonthsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @month = @project.months.build(month_params)
+    @month.user = current_user
     if @month.save
       redirect_to @project, notice: 'Successfully Added Monthly Report'
     else

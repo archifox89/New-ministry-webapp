@@ -1,5 +1,6 @@
 class MinistryReportsController < ApplicationController
   before_action :set_ministry_report, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   respond_to :html
 
@@ -22,6 +23,7 @@ class MinistryReportsController < ApplicationController
 
   def create
     @ministry_report = MinistryReport.new(ministry_report_params)
+    @ministry_report.user = current_user
     if @ministry_report.save
       redirect_to project_docs_path, notice: 'Successfully Added Report'
     else

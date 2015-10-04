@@ -1,5 +1,6 @@
 class InteriorReportsController < ApplicationController
   before_action :set_interior_report, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   respond_to :html
 
@@ -22,6 +23,7 @@ class InteriorReportsController < ApplicationController
 
   def create
     @interior_report = InteriorReport.new(interior_report_params)
+    @interior_report.user = current_user
     if @interior_report.save
       redirect_to project_docs_path, notice: 'Successfully Added Report'
     else

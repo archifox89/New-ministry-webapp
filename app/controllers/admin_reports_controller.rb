@@ -1,5 +1,6 @@
 class AdminReportsController < ApplicationController
   before_action :set_admin_report, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   respond_to :html
 
@@ -22,7 +23,7 @@ class AdminReportsController < ApplicationController
 
   def create
     @admin_report = AdminReport.new(admin_report_params)
-    @admin_report.save
+    @admin_report.user = current_user
     if @admin_report.save
       redirect_to project_docs_path, notice: 'Successfully Added Report'
     else

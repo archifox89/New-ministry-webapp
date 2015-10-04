@@ -1,5 +1,6 @@
 class CircularsController < ApplicationController
   before_action :set_circular, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   respond_to :html
 
@@ -22,6 +23,7 @@ class CircularsController < ApplicationController
 
   def create
     @circular = Circular.new(circular_params)
+    @circular.user = current_user
     if @circular.save
       redirect_to project_docs_path, notice: 'Successfully Added Report'
     else

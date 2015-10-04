@@ -1,5 +1,6 @@
 class AdminCircularsController < ApplicationController
   before_action :set_admin_circular, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   respond_to :html
 
@@ -22,6 +23,7 @@ class AdminCircularsController < ApplicationController
 
   def create
     @admin_circular = AdminCircular.new(admin_circular_params)
+    @admin_circular.user = current_user
      if @admin_circular.save
       redirect_to project_docs_path, notice: 'Successfully Added Report'
     else

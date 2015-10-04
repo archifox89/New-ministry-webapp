@@ -1,5 +1,7 @@
 class ExteriorReportsController < ApplicationController
   before_action :set_exterior_report, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
+
 
   respond_to :html
 
@@ -22,6 +24,7 @@ class ExteriorReportsController < ApplicationController
 
   def create
     @exterior_report = ExteriorReport.new(exterior_report_params)
+    @exterior_report.user = current_user
     if @exterior_report.save
       redirect_to exterior_reports_path, notice: 'Successfully Added Report'
     else

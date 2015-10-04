@@ -10,18 +10,26 @@
     <table class="table table-striped">
       <tr>
         <th>Number</th>
-        <th>Subject</th>
         <th>Date Issued</th>
-        <th>View / Download</th>
-        <th>Actions</th>
+        <th>Date Uploaded</th>
+        <th>Subject</th>
+        <th></th>
       </tr>
       <% @exterior_reports.each do |exterior_report| %>
         <tr>
-          <td>#&nbsp;<%= exterior_report.number %></td>
-          <td><%= exterior_report.subject %></td>
-          <td><%= exterior_report.date_issued %></td>
-          <td><%=  link_to 'Download file', exterior_report.report.url, target: "_blank" %></td>
-          <td><%= link_to 'Edit', edit_exterior_report_path(exterior_report) %> | <%= link_to 'Delete', exterior_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= exterior_report.number %></td>
+          <td><%= exterior_report.date_issued.strftime("%D") %></td>
+          <td><%= exterior_report.created_at.strftime("%D") %></td>
+          <td><div class="arabic-subject"><%= exterior_report.subject %></div></td>
+          <td><% if exterior_report.user == current_user %>
+            <%= link_to edit_exterior_report_path(exterior_report), target: "_blank" do %>
+          <i class="fa fa-pencil"></i>
+          <% end %> | <%= link_to exterior_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o"></i>
+          <% end %> |
+          <% end %> <%= link_to exterior_report.report.url, target: "_blank" do %> 
+            <i class="fa fa-download"></i>
+          <% end %></td>
         </tr>
       <% end %>
     </table>
@@ -30,3 +38,7 @@
     </div>
   </div>
 </div>
+
+
+
+          

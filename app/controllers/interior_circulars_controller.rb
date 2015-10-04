@@ -1,5 +1,6 @@
 class InteriorCircularsController < ApplicationController
   before_action :set_interior_circular, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   respond_to :html
 
@@ -22,6 +23,7 @@ class InteriorCircularsController < ApplicationController
 
   def create
     @interior_circular = InteriorCircular.new(interior_circular_params)
+    @interior_circular.user = current_user
     if @interior_circular.save
       redirect_to project_docs_path, notice: 'Successfully Added Report'
     else
