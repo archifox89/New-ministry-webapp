@@ -42,7 +42,7 @@
                 <td><%= admin_circular.date_issued.strftime("%D") %></td>
                 <td><%= admin_circular.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= admin_circular.subject %></div></td>
-                <td><% if admin_circular.user == current_user %>
+                <td><% if admin_circular.user == current_user || current_user.admin? %>
                 <%= link_to edit_admin_circular_path(admin_circular), target: "_blank" do %>
               <i class="fa fa-pencil"></i>
               <% end %> | <%= link_to admin_circular, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -75,7 +75,7 @@
                 <td><%= admin_report.date_issued.strftime("%D") %></td>
                 <td><%= admin_report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= admin_report.subject %></div></td>
-                <td><% if admin_report.user == current_user %>
+                <td><% if admin_report.user == current_user || current_user.admin? %>
                   <%= link_to edit_admin_report_path(admin_report), target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
                 <% end %> | <%= link_to admin_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -108,7 +108,7 @@
                 <td><%= circular.date_issued.strftime("%D") %></td>
                 <td><%= circular.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= circular.subject %></div></td>
-                <td><% if circular.user == current_user %>
+                <td><% if circular.user == current_user || current_user.admin? %>
                   <%= link_to edit_circular_path(circular), target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
                 <% end %> | <%= link_to circular, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -143,7 +143,7 @@
                 <td><%= interior_report.date_issued.strftime("%D") %></td>
                 <td><%= interior_report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= interior_report.subject %></div></td>
-                <td><% if interior_report.user == current_user %>
+                <td><% if interior_report.user == current_user || current_user.admin? %>
                   <%= link_to edit_interior_report_path(interior_report), target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
                 <% end %> | <%= link_to interior_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -176,7 +176,7 @@
                 <td><%= message.date_issued.strftime("%D") %></td>
                 <td><%= message.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= message.subject %></div></td>
-                <td><% if message.user == current_user %>
+                <td><% if message.user == current_user || current_user.admin? %>
                   <%= link_to edit_message_path(message), target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
                 <% end %> | <%= link_to message, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -209,7 +209,7 @@
                 <td><%= ministry_report.date_issued.strftime("%D") %></td>
                 <td><%= ministry_report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= ministry_report.subject %></div></td>
-                <td><% if ministry_report.user == current_user %>
+                <td><% if ministry_report.user == current_user || current_user.admin? %>
                   <%= link_to edit_ministry_report_path(ministry_report), target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
                 <% end %> | <%= link_to ministry_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -242,7 +242,7 @@
                 <td><%= report.date_issued.strftime("%D") %></td>
                 <td><%= report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= report.subject %></div></td>
-                <td><% if report.user == current_user %>
+                <td><% if report.user == current_user || current_user.admin? %>
                   <%= link_to edit_report_path(report), target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
                 <% end %> | <%= link_to report, method: :delete, data: { confirm: 'Are you sure?' } do %>

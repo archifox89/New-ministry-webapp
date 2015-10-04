@@ -21,7 +21,7 @@
           <td><%= exterior_report.date_issued.strftime("%D") %></td>
           <td><%= exterior_report.created_at.strftime("%D") %></td>
           <td><div class="arabic-subject"><%= exterior_report.subject %></div></td>
-          <td><% if exterior_report.user == current_user %>
+          <td><% if exterior_report.user == current_user || current_user.admin? %>
             <%= link_to edit_exterior_report_path(exterior_report), target: "_blank" do %>
           <i class="fa fa-pencil"></i>
           <% end %> | <%= link_to exterior_report, method: :delete, data: { confirm: 'Are you sure?' } do %>

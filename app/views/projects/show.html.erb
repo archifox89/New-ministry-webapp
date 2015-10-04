@@ -150,7 +150,8 @@
         <th>Number</th>
         <th>Month</th>
         <th>Phase</th>
-        <th>View / Download</th>
+        <th>actions</th>
+        
       </tr>
 
       <% @project.months.each do |month| %>
@@ -158,7 +159,15 @@
           <td>#&nbsp;<%= month.id %></td>
           <td><%= month.month_time %></td>
           <td><%= month.phase %></td>
-          <td><%=  link_to 'Download file', month.report.url, target: "_blank" %></td>
+          <td><% if month.user == current_user || current_user.admin? %>
+            <%= link_to edit_project_month_path(@project, month), target: "_blank" do %>
+          <i class="fa fa-pencil"></i>
+          <% end %> | <%= link_to project_month_path(@project, month), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o"></i>
+          <% end %> |
+          <% end %> <%= link_to month.report.url, target: "_blank" do %> 
+            <i class="fa fa-download"></i>
+          <% end %></td>
         </tr>
       <% end %>
     </table>
