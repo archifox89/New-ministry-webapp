@@ -72,7 +72,7 @@
 - [x] Make the subject column apear first and on the right (for arabic formatting)
 - [ ] Make sure only **users who upload** the files and **admin** can delete and edit the input
 - [x] Add a column for (upload date) and (upload by)
-- [ ] Make inputs appear in **descending** order according to **:date_issued**
+- [x] Make inputs appear in **descending** order according to **:date_issued**
 - [ ] Changing input method for dates to make a calender appear
 - [ ] When icons are highlighted, make a popup appear explaining what it does
 - [ ] Add ability to search and filter the desired documents
@@ -82,7 +82,7 @@
 	- [ ] Make it so their is a select box with the most common selections
 	- [ ] Incase the location is not listed, add a **other** option which renders a blank text feild 
 	- [ ] add an option to filter the exterior reports according to where they are from
-- [ ] make interior and exterior report buttons appear selected to show active page
+- [x] make interior and exterior report buttons appear selected to show active page
 
 
 **Optional features:**
