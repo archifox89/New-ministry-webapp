@@ -1,6 +1,6 @@
 <div class="report-buttons">
   <div class="btn-group" role="group" aria-label="...">
-    <%= link_to "Interior Reports", project_docs_path, class: "btn btn-default" %>
+    <%= link_to "Interior Reports", project_docs_path, class: "btn btn-default active" %>
     <%= link_to "Exterior Reports", exterior_reports_path, class: "btn btn-default" %>
   </div>
 </div>
@@ -54,6 +54,10 @@
               </tr>
             <% end %>
           </table>
+          <br>
+          <div class="digg_pagination">
+            <%= will_paginate @admin_circulars, :container => false %>
+          </div>
           <div class="add-report">
             <%= link_to "Add Report", new_admin_circular_path, class: 'btn btn-primary' %>
           </div>
@@ -87,6 +91,10 @@
               </tr>
             <% end %>
           </table>
+          <br>
+          <div class="digg_pagination">
+            <%= will_paginate @admin_reports, :container => false %>
+          </div>
           <div class="add-report">
             <%= link_to "Add Report", new_admin_report_path, class: 'btn btn-primary' %>
           </div>
@@ -120,6 +128,10 @@
               </tr>
             <% end %>
           </table>
+          <br>
+          <div class="digg_pagination">
+            <%= will_paginate @circulars, :container => false %>
+          </div>
           <div class="add-report">
             <%= link_to "Add Report", new_circular_path, class: 'btn btn-primary' %>
           </div>
@@ -155,6 +167,10 @@
               </tr>
             <% end %>
           </table>
+          <br>
+          <div class="digg_pagination">
+            <%= will_paginate @interior_reports, :container => false %>
+          </div>
           <div class="add-report">
             <%= link_to "Add Report", new_interior_report_path, class: 'btn btn-primary' %>
           </div>
@@ -188,6 +204,10 @@
               </tr>
             <% end %>
           </table>
+          <br>
+          <div class="digg_pagination">
+            <%= will_paginate @messages, :container => false %>
+          </div>
           <div class="add-report">
             <%= link_to "Add Report", new_message_path, class: 'btn btn-primary' %>
           </div>
@@ -221,6 +241,10 @@
               </tr>
             <% end %>
           </table>
+          <br>
+          <div class="digg_pagination">
+            <%= will_paginate @ministry_reports, :container => false %>
+          </div>
           <div class="add-report">
             <%= link_to "Add Report", new_ministry_report_path, class: 'btn btn-primary' %>
           </div>
@@ -254,6 +278,10 @@
               </tr>
             <% end %>
           </table>
+          <br>
+          <div class="digg_pagination">
+            <%= will_paginate @reports, :container => false %>
+          </div>
           <div class="add-report">
             <%= link_to "Add Report", new_report_path, class: 'btn btn-primary' %>
           </div>

@@ -1,7 +1,7 @@
 <div class="report-buttons">
   <div class="btn-group" role="group" aria-label="...">
     <%= link_to "Interior Reports", project_docs_path, class: "btn btn-default" %>
-    <%= link_to "Exterior Reports", exterior_reports_path, class: "btn btn-default" %>
+    <%= link_to "Exterior Reports", exterior_reports_path, class: "btn btn-default active" %>
   </div>
 </div>
 <div class="row">
@@ -33,6 +33,10 @@
         </tr>
       <% end %>
     </table>
+    <br>
+    <div class="digg_pagination">
+      <%= will_paginate @admin_circulars, :container => false %>
+    </div>
     <div class="add-report">
       <%= link_to "Add Report", new_exterior_report_path, class: 'btn btn-primary' %>
     </div>

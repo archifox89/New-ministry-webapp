@@ -22,6 +22,7 @@ gem "paperclip", "~> 4.3"
 gem "jquery-fileupload-rails"
 gem 'bootstrap_progressbar'
 gem 'aws-sdk', '< 2.0'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
      gem 'sqlite3'

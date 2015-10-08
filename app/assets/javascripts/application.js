@@ -14,6 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery-fileupload
+//= require active_tabs
 //= require bootstrap
 //= require turbolinks
 //= require_tree .

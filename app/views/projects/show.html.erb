@@ -3,7 +3,7 @@
 <div role="tabpanel">
 
 <!-- Nav tabs -->
-<ul class="nav nav-tabs nav-justified" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist" id="go">
   <li role="presentation" class="active"><a href="#status" aria-controls="status" role="tab" data-toggle="tab">Status</a></li>
   <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
   <li role="presentation"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General Info</a></li>
@@ -171,6 +171,9 @@
         </tr>
       <% end %>
     </table>
+    <div class="digg_pagination">
+      <%= will_paginate @months, :container => false %>
+    </div>
     <div class="add-report">
       <%= link_to "Add Monthly Report", new_project_month_path(@project, @month), class: 'btn btn-primary' %>
     </div>

@@ -9,7 +9,9 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    respond_with(@project)
+    @project = Project.find(params[:id])
+    @months = @project.months.all.paginate(:page => params[:page], :per_page => 3)
+
   end
 
   def new
@@ -24,7 +26,6 @@ class ProjectsController < ApplicationController
   end
 
   def create
-
     @project = Project.new(project_params)
     if @project.save
     flash[:notice] = "Successfully created project."

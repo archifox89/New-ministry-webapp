@@ -5,7 +5,7 @@ class AdminCircularsController < ApplicationController
   respond_to :html
 
   def index
-    @admin_circulars = AdminCircular.all
+    @admin_circulars = AdminCircular.all.paginate(:page => params[:page], :per_page => 10)
     respond_with(@admin_circulars)
   end
 

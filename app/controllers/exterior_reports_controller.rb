@@ -6,7 +6,7 @@ class ExteriorReportsController < ApplicationController
   respond_to :html
 
   def index
-    @exterior_reports = ExteriorReport.all
+    @exterior_reports = ExteriorReport.all.paginate(:page => params[:page], :per_page => 10)
     respond_with(@exterior_reports)
   end
 
