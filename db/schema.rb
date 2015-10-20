@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004103128) do
+ActiveRecord::Schema.define(version: 20151018093631) do
 
   create_table "admin_circulars", force: true do |t|
     t.string   "number"
@@ -42,6 +42,16 @@ ActiveRecord::Schema.define(version: 20151004103128) do
   end
 
   add_index "admin_reports", ["user_id"], name: "index_admin_reports_on_user_id"
+
+  create_table "announcements", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "announcements", ["user_id"], name: "index_announcements_on_user_id"
 
   create_table "circulars", force: true do |t|
     t.string   "number"
@@ -190,11 +200,11 @@ ActiveRecord::Schema.define(version: 20151004103128) do
     t.string   "personal_email"
     t.string   "internal_no"
     t.boolean  "nationality",        limit: 255
-    t.boolean  "gender",             limit: 255
     t.string   "academic_degree"
     t.string   "major"
     t.string   "work_experience"
     t.string   "folder"
+    t.string   "gender2"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"

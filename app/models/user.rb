@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   has_many :ministry_reports
   has_many :months
   has_many :reports
+  has_many :announcements
 
 end
 

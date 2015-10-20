@@ -11,9 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-fileupload
+//= require jquery_nested_form
+//= require tooltip
+//= require bootstrap-sprockets
 //= require active_tabs
 //= require bootstrap
 //= require turbolinks

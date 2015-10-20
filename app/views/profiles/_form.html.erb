@@ -9,7 +9,7 @@
     <div class="panel-body">
     	<%= f.text_field :name, label: 'Full Name:' %>
     	<%= f.text_field :civil, label: 'Civil ID:' %>
-
+      <%= f.select :gender2, [["Female"], ["Male"]],  { label: "Gender"}, { class: "selectpicker" } %>
       <%= f.text_field :mobile, label: 'Mobile no:' %>
       <%= f.email_field :personal_email, label: 'Personal Email:' %>
 

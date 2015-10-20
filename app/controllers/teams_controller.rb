@@ -25,7 +25,6 @@ class TeamsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @team = @project.teams.new(team_params)
-    @team.user = current_user
    if @team.save
       redirect_to @project, notice: 'Successfully Joined Project'
     else

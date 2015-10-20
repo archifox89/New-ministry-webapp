@@ -5,7 +5,7 @@
 <!-- Nav tabs -->
 <ul class="nav nav-tabs nav-justified" role="tablist" id="go">
   <li role="presentation" class="active"><a href="#status" aria-controls="status" role="tab" data-toggle="tab">Status</a></li>
-  <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
+<!--   <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li> -->
   <li role="presentation"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General Info</a></li>
   <li role="presentation"><a href="#schedule" aria-controls="schedule" role="tab" data-toggle="tab">Schedule</a></li>
   <li role="presentation"><a href="#budget" aria-controls="budget" role="tab" data-toggle="tab">Budget</a></li>
@@ -62,6 +62,12 @@
 
   <div role="tabpanel" class="tab-pane" id="general">
     <ul class="list-group">
+         <li class="list-group-item">
+          <strong>Description:</strong>
+          <p>
+            <%= simple_format(@project.description) %>
+          </p>
+        </li>
         <li class="list-group-item">
           <strong>Phase:</strong>
           <%= @project.phase %>        
@@ -186,22 +192,22 @@
         
         <div class="panel-body">
           <% @project.teams.each do |team| %>
-            <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.user.employee_name %> - <%= team.role %></p>
+            <p><strong>Team Member:</strong>&nbsp;&nbsp;<%= team.member %> - <%= team.role %> | <%= link_to project_team_path(@project, team), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o"></i> | <%= link_to edit_project_team_path(@project, team), target: "_blank" do %>
+          <i class="fa fa-pencil"></i>
+          <% end %> 
+            <% end %></p>
+
           <% end %>
         </div>
       </div>
-       <div class="add-report">
-        <% if @project.teams.present? && @project.teams.first.user == current_user %>
-        <%= link_to 'Edit Role', edit_project_team_path(@project, @project.teams.first), class: 'btn btn-primary' %>
-        <%= link_to 'Leave Project Team', [@project, @project.teams.first], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
-        <% else %>
-        <%= link_to 'Join Project', new_project_team_path(@project, @project.teams.first), class: 'btn btn-primary' %>
-        <% end %>
-        </div>
+        <div class="add-report">
+        
+        <%= link_to 'Add Project Member', new_project_team_path(@project, @project.teams.first), class: 'btn btn-primary' %>
+  
+        </div> 
     </div>
   </div>
-
-
 
 
   <div role="tabpanel" class="tab-pane" id="images">

@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
   
-    resources :exterior_reports
-    resources :messages
-    resources :interior_circulars
-    resources :circulars
-    resources :reports
-    resources :interior_reports
-    resources :admin_circulars
-    resources :admin_reports
-    resources :ministry_reports
+  resources :announcements
 
-
+  resources :exterior_reports
+  resources :messages
+  resources :interior_circulars
+  resources :circulars
+  resources :reports
+  resources :interior_reports
+  resources :admin_circulars
+  resources :admin_reports
+  resources :ministry_reports
 
 
   resources :projects do

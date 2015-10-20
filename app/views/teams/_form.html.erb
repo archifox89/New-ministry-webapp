@@ -15,8 +15,12 @@
       </div>
     <% end %>
 
+ <%= f.collection_select :member, User.all, :employee_name, :employee_name, { prompt: "Please select", :selected => params[:user], label: "Employee" } %> 
+   
+
   <%= f.select :role, [["Project Manager"], ["Assistant"], ["Other"]],  { label: "Role"}, { class: "selectpicker" } %>
 
+    
 
     <div class="actions">
       <%= f.submit "Join Project"%>

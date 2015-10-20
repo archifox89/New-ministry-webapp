@@ -10,73 +10,24 @@
 
 
 
+
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="home">
     	<div class="panel panel-info">
-    		<div class="panel-heading">
-			  	<h4 class="panel-title">Public Holiday<span class="label label-warning">New!</span></h4>
-			  </div>
-			  <div class="panel-body">
-			  	<p>There will be a public holiday on 5/5/2015</p>
-			  <h6> Date: 4/15/2015</h6>
-			  </div>
-
-			  <div class="panel-heading">
-			  	<h4 class="panel-title">Project X Delayed</h4>
-			  </div>
-			  <div class="panel-body">
-			  	<p>Project x has been delayed due to (place reason here)</p>
-			  	<h6> Date: 4/8/2015</h6>
-			  </div>
-
- 				<div class="panel-heading">
-			  	<h4 class="panel-title">Project X new Phase</h4>
-			  </div>
-			  <div class="panel-body">
-			  	<p>Project has moved to phase 3 after successful review of phase 2.</p>
-			  	<h6> Date: 4/2/2015</h6>
-			  </div>
-
-			  <div class="panel-heading">
-			  	<h4 class="panel-title">New Workshops!</h4>
-			  </div>
-			  <div class="panel-body">
-			  	<p>The following new workshops have been introduces: <br><br>
-			  		- Basic Photoshop		(7/6/2015) <br>
-			  		- Interior Design 101 	(6/6/2015) <br>
-			  		- Awsome Workshop no.300 	(25/8/2015) <br><br>
-			  		if interested, please contact employee x for registration
-			  	</p>
-			  	<h6> Date: 3/34/2015</h6>
-			  </div>
-
-			  <div class="panel-heading">
-			  	<h4 class="panel-title">Public Holiday</h4>
-			  </div>
-			  <div class="panel-body">
-			  	<p>There will be a public holiday on 5/5/2015</p>
-			  	<h6> Date: 4/15/2015</h6>
-			  </div>
-
-			  <div class="panel-heading">
-			  	<h4 class="panel-title">Project X Delayed</h4>
-			  </div>
-			  <div class="panel-body">
-			  	<p>Project x has been delayed due to (place reason here)</p>
-			  	<h6> Date: 4/8/2015</h6>
-			  </div>
-
-			  <div class="panel-heading">
-			  	<h4 class="panel-title">Project X new Phase</h4>
-			  </div>
-			  <div class="panel-body">
-			  	<p>Project has moved to phase 3 after successful review of phase 2</p>
-			  	<h6> Date: 4/2/2015</h6>
-			  </div>
-			</div>
-		</div>
-
+         <% @announcements.each do |a| %>
+        <div class="panel-heading">
+          <h4 class="panel-title"><%= a.title %></h4>
+        </div>
+        <div class="panel-body">
+            <%= simple_format(a.description) %>
+        </div>
+        <div class="panel-footer"><h6>Posted by <%= a.user.employee_name %> on <%= a.created_at.strftime("%D")%></h6>
+            </div>
+          <% end %>
+	  </div>
+  </div>
+<%= link_to "Add Announcement Update", new_announcement_path, class: 'btn btn-primary' %>
   <div role="tabpanel" class="tab-pane fade" id="profile">
    	<div class="panel panel-info">
    		<div class="panel-heading">

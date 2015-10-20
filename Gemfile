@@ -23,6 +23,8 @@ gem "jquery-fileupload-rails"
 gem 'bootstrap_progressbar'
 gem 'aws-sdk', '< 2.0'
 gem 'will_paginate', '~> 3.0.6'
+gem 'jquery-turbolinks'
+gem 'fullcalendar-rails'
 
 group :development, :test do
      gem 'sqlite3'

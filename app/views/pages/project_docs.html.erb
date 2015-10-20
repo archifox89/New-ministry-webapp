@@ -43,12 +43,12 @@
                 <td><%= admin_circular.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= admin_circular.subject %></div></td>
                 <td><% if admin_circular.user == current_user || current_user.admin? %>
-                <%= link_to edit_admin_circular_path(admin_circular), target: "_blank" do %>
+                <%= link_to edit_admin_circular_path(admin_circular), title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
               <i class="fa fa-pencil"></i>
-              <% end %> | <%= link_to admin_circular, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <% end %> | <%= link_to admin_circular, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <i class="fa fa-trash-o"></i>
               <% end %> |
-              <% end %> <%= link_to admin_circular.report.url, target: "_blank" do %> 
+              <% end %><%= link_to admin_circular.report.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
                 <i class="fa fa-download"></i>
               <% end %></td>
               </tr>
@@ -62,6 +62,9 @@
             <%= link_to "Add Report", new_admin_circular_path, class: 'btn btn-primary' %>
           </div>
         </div>
+
+
+   
 
       <div role="tabpanel" class="tab-pane" id="admin-report">
           <table class="table table-striped">
@@ -80,12 +83,12 @@
                 <td><%= admin_report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= admin_report.subject %></div></td>
                 <td><% if admin_report.user == current_user || current_user.admin? %>
-                  <%= link_to edit_admin_report_path(admin_report), target: "_blank" do %>
+                  <%= link_to edit_admin_report_path(admin_report), title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
-                <% end %> | <%= link_to admin_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <% end %> | <%= link_to admin_report, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %> |
-                <% end %> <%= link_to admin_report.report.url, target: "_blank" do %> 
+                <% end %> <%= link_to admin_report.report.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
                   <i class="fa fa-download"></i>
                 <% end %></td>
               </tr>
@@ -117,12 +120,12 @@
                 <td><%= circular.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= circular.subject %></div></td>
                 <td><% if circular.user == current_user || current_user.admin? %>
-                  <%= link_to edit_circular_path(circular), target: "_blank" do %>
+                  <%= link_to edit_circular_path(circular), title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
-                <% end %> | <%= link_to circular, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <% end %> | <%= link_to circular, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %> |
-                <% end %> <%= link_to circular.report.url, target: "_blank" do %> 
+                <% end %> <%= link_to circular.report.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
                   <i class="fa fa-download"></i>
                 <% end %></td>
               </tr>
@@ -156,12 +159,12 @@
                 <td><%= interior_report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= interior_report.subject %></div></td>
                 <td><% if interior_report.user == current_user || current_user.admin? %>
-                  <%= link_to edit_interior_report_path(interior_report), target: "_blank" do %>
+                  <%= link_to edit_interior_report_path(interior_report), title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
-                <% end %> | <%= link_to interior_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <% end %> | <%= link_to interior_report, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %> |
-                <% end %> <%= link_to interior_report.report.url, target: "_blank" do %> 
+                <% end %> <%= link_to interior_report.report.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
                   <i class="fa fa-download"></i>
                 <% end %></td>
               </tr>
@@ -193,12 +196,12 @@
                 <td><%= message.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= message.subject %></div></td>
                 <td><% if message.user == current_user || current_user.admin? %>
-                  <%= link_to edit_message_path(message), target: "_blank" do %>
+                  <%= link_to edit_message_path(message), title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
-                <% end %> | <%= link_to message, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <% end %> | <%= link_to message, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %> |
-                <% end %> <%= link_to message.report.url, target: "_blank" do %> 
+                <% end %> <%= link_to message.report.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
                   <i class="fa fa-download"></i>
                 <% end %></td>
               </tr>
@@ -230,12 +233,12 @@
                 <td><%= ministry_report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= ministry_report.subject %></div></td>
                 <td><% if ministry_report.user == current_user || current_user.admin? %>
-                  <%= link_to edit_ministry_report_path(ministry_report), target: "_blank" do %>
+                  <%= link_to edit_ministry_report_path(ministry_report), title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
-                <% end %> | <%= link_to ministry_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <% end %> | <%= link_to ministry_report, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %> |
-                <% end %> <%= link_to ministry_report.report.url, target: "_blank" do %> 
+                <% end %> <%= link_to ministry_report.report.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
                   <i class="fa fa-download"></i>
                 <% end %></td>
               </tr>
@@ -267,12 +270,12 @@
                 <td><%= report.created_at.strftime("%D") %></td>
                 <td><div class="arabic-subject"><%= report.subject %></div></td>
                 <td><% if report.user == current_user || current_user.admin? %>
-                  <%= link_to edit_report_path(report), target: "_blank" do %>
+                  <%= link_to edit_report_path(report), title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
                 <i class="fa fa-pencil"></i>
-                <% end %> | <%= link_to report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <% end %> | <%= link_to report, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %> |
-                <% end %> <%= link_to report.file.url, target: "_blank" do %> 
+                <% end %> <%= link_to report.file.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
                   <i class="fa fa-download"></i>
                 <% end %></td>
               </tr>

@@ -22,12 +22,12 @@
           <td><%= exterior_report.created_at.strftime("%D") %></td>
           <td><div class="arabic-subject"><%= exterior_report.subject %></div></td>
           <td><% if exterior_report.user == current_user || current_user.admin? %>
-            <%= link_to edit_exterior_report_path(exterior_report), target: "_blank" do %>
+            <%= link_to edit_exterior_report_path(exterior_report),  title: 'Edit', 'data-toggle' => 'tooltip', 'data-placement' => 'left', target: "_blank" do %>
           <i class="fa fa-pencil"></i>
-          <% end %> | <%= link_to exterior_report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <% end %> | <%= link_to exterior_report, title: 'Delete', 'data-toggle' => 'tooltip', 'data-placement' => 'top', method: :delete, data: { confirm: 'Are you sure?' } do %>
             <i class="fa fa-trash-o"></i>
           <% end %> |
-          <% end %> <%= link_to exterior_report.report.url, target: "_blank" do %> 
+          <% end %> <%= link_to exterior_report.report.url, title: 'Download', 'data-toggle' => 'tooltip', 'data-placement' => 'right', target: "_blank" do %> 
             <i class="fa fa-download"></i>
           <% end %></td>
         </tr>
