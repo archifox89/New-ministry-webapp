@@ -45,16 +45,16 @@
  
 - [ ] add search, sort and filter to employee index
 
-- [ ] **4) Add announcements feature to main page**
+- [x] **4) Add announcements feature to main page**
 
-- [ ] create announcement scaffold
+- [x] create announcement scaffold
 - [ ] when new announecments appear, make "new" show. and then it dissapears after page is refreshed
 
 - [ ] **5) add personal notifications and messages**
 - [ ] make ability to send personal notifications to specific employees
 - [ ] send an email to users who get a personal notification
 
-- [ ] **6) add authorization and user groups and privelages (admin and general user)**
+- [x] **6) add authorization and user groups and privelages (admin and general user)**
 
 - [ ] **7) add a calender showing main upcoming events in department**
 
@@ -70,11 +70,11 @@
 - [x] Add icons for download **Edit, Download, and Delete**
 - [x] Remove the actions column and view / Download Column
 - [x] Make the subject column apear first and on the right (for arabic formatting)
-- [ ] Make sure only **users who upload** the files and **admin** can delete and edit the input
+- [x] Make sure only **users who upload** the files and **admin** can delete and edit the input
 - [x] Add a column for (upload date) and (upload by)
-- [ ] Make inputs appear in **descending** order according to **:date_issued**
+- [x] Make inputs appear in **descending** order according to **:date_issued**
 - [ ] Changing input method for dates to make a calender appear
-- [ ] When icons are highlighted, make a popup appear explaining what it does
+- [x] When icons are highlighted, make a popup appear explaining what it does
 - [ ] Add ability to search and filter the desired documents
 - [ ] Seperate the inputs into two categories: **current year, archive**
 	- [ ] when in archive page, add tabs for each year
@@ -82,7 +82,7 @@
 	- [ ] Make it so their is a select box with the most common selections
 	- [ ] Incase the location is not listed, add a **other** option which renders a blank text feild 
 	- [ ] add an option to filter the exterior reports according to where they are from
-- [ ] make interior and exterior report buttons appear selected to show active page
+- [x] make interior and exterior report buttons appear selected to show active page
 
 
 **Optional features:**
@@ -107,7 +107,7 @@
 - [ ] talk to may about project sections
 - [ ] add upload to project budget section (to add budgets reports? ask may)
 - [ ] ask may about schedule information
-- [ ] add edit, delete and view for monthly reports
+- [x] add edit, delete and view for monthly reports
 - [ ] when selecting month for monthly report, make calender appear
 - [ ] ask may about project team roles
 - [ ] add a box for role "other" in teams
