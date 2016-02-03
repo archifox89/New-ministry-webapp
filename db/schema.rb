@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151018093631) do
+ActiveRecord::Schema.define(version: 20151022104807) do
 
   create_table "admin_circulars", force: true do |t|
     t.string   "number"
@@ -53,6 +53,11 @@ ActiveRecord::Schema.define(version: 20151018093631) do
 
   add_index "announcements", ["user_id"], name: "index_announcements_on_user_id"
 
+  create_table "calendars", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "circulars", force: true do |t|
     t.string   "number"
     t.string   "subject"
@@ -67,6 +72,14 @@ ActiveRecord::Schema.define(version: 20151018093631) do
   end
 
   add_index "circulars", ["user_id"], name: "index_circulars_on_user_id"
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "experiences", force: true do |t|
     t.string   "company"
@@ -96,6 +109,7 @@ ActiveRecord::Schema.define(version: 20151018093631) do
     t.integer  "report_file_size"
     t.datetime "report_updated_at"
     t.integer  "user_id"
+    t.string   "location"
   end
 
   add_index "exterior_reports", ["user_id"], name: "index_exterior_reports_on_user_id"

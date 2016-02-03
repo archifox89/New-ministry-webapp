@@ -48,6 +48,6 @@ class ExteriorReportsController < ApplicationController
     end
 
     def exterior_report_params
-      params.require(:exterior_report).permit(:number, :subject, :date_issued, :report)
+      params.require(:exterior_report).permit(:number, :subject, :date_issued, :report, :location)
     end
 end

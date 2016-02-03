@@ -18,7 +18,7 @@
 			 		</ul>  -->
 			 </li>  
 			 <li><%= link_to projects_path do %>
-			 		<i class="fa fa-building-o"></i>Projects<i class="fa fa-sort-desc"></i>
+			 		<i class="fa fa-building-o"></i>Projects
 			 		<% end %>
 			 	<!--	<ul>
 		 			<li><%= link_to active_path do %>Active Projects<i class="fa fa-caret-right"></i>
@@ -33,9 +33,26 @@
 		 		</ul> -->
 			 </li>
 		   <li><%= link_to project_docs_path do %>
-		   	<i class="fa fa-folder-open"></i>Project Documents<i class="fa fa-sort-desc"></i>
+		   	<i class="fa fa-folder-open"></i>Circulars and Reports<i class="fa fa-sort-desc"></i>
 		   	<% end %>
 			<ul>
+		 				<li><%= link_to project_docs_path do %>Interior Reports
+		 				<% end %>
+<!-- 		 				<ul>
+				 			<li><%= link_to "Phase 1", phase1_path %></li>
+				 			<li><%= link_to "Phase 2", phase2_path %></li>
+				 			<li><%= link_to "Phase 3", phase3_path %></li>
+				 			<li><%= link_to "Phase 4", phase4_path %></li>
+				 		</ul> -->
+		 			</li>
+		 			<li><%= link_to exterior_reports_path do %>Exterior Reports
+		 				<% end %>
+		 		</ul> 
+		   </li>
+		   <li ><%= link_to search_path do %>
+		   	<i class="fa fa-search"></i>Templates<i class="fa fa-sort-desc"></i>
+		   	<% end %>
+		   	<ul>
 		 			<li><%= link_to "Monthly Report Template", monthly_template_path %></li>
 		 		<!-- 		<li><%= link_to development2_path do %>Design Stage<i class="fa fa-caret-right"></i>
 		 				<% end %>
@@ -48,18 +65,14 @@
 		 			</li>
 		 		</ul> 
 		   </li>
-		   <li ><%= link_to search_path do %>
-		   	<i class="fa fa-search"></i>Search
-		   	<% end %>
-		   </li>
-		   <li><%= link_to reports_path do %>
+<!-- 		   <li><%= link_to reports_path do %>
 		   	<i class="fa fa-file-text-o"></i>Reports
 		   	<% end %>
 		   </li>
 		   <li><%= link_to feedback_path do %>
 		   	<i class="fa fa-comment-o"></i>Feedback
 		   	<% end %>
-		   </li>
+		   </li> -->
 		</ul>
 </nav>
 

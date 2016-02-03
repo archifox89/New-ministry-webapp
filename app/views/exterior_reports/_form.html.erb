@@ -13,20 +13,26 @@
 
   <div class="field">
 
-    <%= f.text_field :number %>
-  </div>
+  <%= f.text_field :number %>
+    </div>
   <div class="field">
 
-    <%= f.text_area :subject %>
-  </div>
+  <%= f.text_area :subject %>
+    </div>
   <div class="field">
 
-    <%= f.date_select :date_issued %>
-  </div>
+  <%= f.text_field :location, :label => "From" %>
+    </div>
+  <div class="field">
+
+  <%= f.date_select :date_issued %>
+    </div>
   <div class="actions">
-    <%= f.file_field(:report) %>
-  </div>
+
+  <%= f.file_field(:report) %>
+    </div>
   <div class="actions">
+
     <%= f.submit "Add Report" %>
   </div>
 <% end %>
