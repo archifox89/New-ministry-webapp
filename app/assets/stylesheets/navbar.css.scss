@@ -1,21 +1,21 @@
-nav {
+.pages nav {
 	z-index: 3;
 	padding-bottom: 30px;
 }
 
 
-nav ul ul {
+.pages nav ul ul {
 	width: 194px;
 	font-size: 0.9em;
 	display: none;
 	z-index: 3;
 }
 
-nav ul li:hover > ul {
+.pages nav ul li:hover > ul {
 		display: block;
 	}
 
-nav ul {
+.pages nav ul {
 	font-size: 0.96em;
   z-index: 3;
   background: #F6F6F6;
@@ -27,30 +27,30 @@ nav ul {
 	position: relative;
 }
 
-nav ul:after {
+.pages nav ul:after {
 		content: ""; clear: both; display: block;
 		z-index: 3;
 	}
 
-nav a:hover {
+.pages nav a:hover {
 		width: 100%;
 		background: #CCCCCC;
 		text-decoration: none;
 }
 
 
-nav ul li {
+.pages nav ul li {
 	margin-left: 40px;
 	float: left;
 	z-index: 3;
 
 }
 
-nav ul ul {
+.pages nav ul ul {
 	position: absolute; top: 100%;
 }
 
-nav ul ul li {
+.pages nav ul ul li {
 		margin-left: 0;
 		border-bottom: 1px solid #ccc;
 		float: none; 
@@ -59,21 +59,21 @@ nav ul ul li {
 	}
 
 
-nav li {
+.pages nav li {
 	font-color: #FFFFD6;
 	font-weight: bold;
 	z-index: 3;
 }
 
 
-nav a {
+.pages nav a {
 		display:inline-block;
     padding:16px;
     color: black;
     }
 
 
-nav ul ul ul {
+.pages nav ul ul ul {
 	font-size: 1em;
 	position: absolute; left: 100%; top:0;
 }
@@ -84,21 +84,21 @@ nav ul ul ul {
 } */
 
 
-.nav .badge {
+.pages .nav .badge {
 	margin-left: 7px;
 	background-color: red;
 }
 
-.nav a {
+.pages .nav a {
 	
 }
 
-  .btn {
+.pages .btn {
   text-align: center;
 }
 
 
-nav .fa {
+.pages nav .fa {
 	padding-right: 7px;
 	padding-left: 7px;
 	color: #555555;

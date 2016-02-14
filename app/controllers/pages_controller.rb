@@ -17,6 +17,9 @@ class PagesController < ApplicationController
     @reports = Report.all.paginate(:page => params[:page], :per_page => 10).order('date_issued DESC')
   end
 
+  def project_documents
+  end
+
   def search
   end
 

@@ -11,12 +11,12 @@
  * file per style scope.
  *
  *= require_self
- *= require my_stylings
- *= require navbar
  *= require will_paginate
- *= require custom 
- *= require pictures 
- *= require projects
+ *= require navbar
+ *= require my_stylings
+ *= require new_stylings
+ *= require custom
+
  *= require rails_bootstrap_forms
  *= require font-awesome
  */

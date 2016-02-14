@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  get 'project_documents/predesign'
+
+  get 'project_documents/design'
+
+  get 'project_documents/tendering'
+
+  get 'project_documents/construction'
+
+  get "predesign" => "project_documents#predesign"
+
   resources :announcements
 
   resources :exterior_reports
@@ -40,6 +50,7 @@ end
   get "search" => "pages#search"
   get "reports" => "pages#reports"
   get "feedback" => "pages#feedback"
+  get "project_documents" => "pages#project_documents"
 
  
 
