@@ -1,2 +1,105 @@
-<h1>ProjectDocuments#design</h1>
-<p>Find me in app/views/project_documents/design.html.erb</p>
+	<div class="full_sidebar">
+		<div class="logo_container">
+			<div class="logo_wrapper">
+				<div class="logo">
+					<a href="#" id="logo_text"><%= image_tag ('spa-logo2.png') %>SPA</a>
+				</div>
+			</div>
+		</div>
+		<div class="side_nav">
+			<ul>
+				<li><a href="#"><%= image_tag ('my-projects2.png') %>My Projects</a></li>
+				<li><a href="#"><%= image_tag ('all-projects.png') %>All Projects</a></li>
+				<li class="active_sidenav"><a href="#"><%= image_tag ('project-docs.png') %>Project Stages</a></li>
+				<li class="space_filler"><a href="#"></a></li> 
+			</ul>
+		</div>
+	</div>
+	<div class="full_content">
+			<div class="fixed_content">
+				<div class="top_nav">
+					<nav>
+						<ul>
+						<!-- 	<li><a href="#">Calendar</a></li>
+							<li><a href="#">Messages</a></li> -->
+							<li class="log_out">  <%= link_to destroy_user_session_path, method: :delete do %>
+						    <span>
+						      <i class="fa fa-power-off"></i>
+						    </span>
+						  <% end %>
+							</li>
+							<li><a href="#"><%= image_tag ('user.png') %><%= current_user.employee_name %><i class="fa fa-chevron-down"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="heading">
+					<div class="top_heading">
+						<h1 class="main_title">Project Stages</h1>
+					</div>
+					<div class="sub_navbar">
+						<nav>
+							<ul>
+								<li><%= link_to "1) Pre-design", project_documents_predesign_path, :class => "button_border" %></li>
+								<li><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i></li>
+								<li><%= link_to "2) Design", project_documents_design_path, :class => "button_active" %></li>
+								<li><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i></li>
+								<li><%= link_to "3) Tendering", project_documents_tendering_path, :class => "button_border" %></li>
+								<li><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i></li>
+								<li><%= link_to "4) Construction", project_documents_construction_path, :class => "button_border" %></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="fix">
+			<div class="main_content">
+				<div class="content_container">
+					<div class="content_title">
+						<h2>Design Stage Main Steps</h2>
+					</div>
+					<div class="content_info">
+						<ul>
+							<li><div class="number">1</div><p>طلب المشروع من قبل الجهة المستفيدة</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li class="list_highlight"><div class="number">2</div><p>جود قرار تخصيص موقع من قبل المجلس البلدي</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li><div class="number">3</div><p>على مهندس المشروع التأكد من استيفاء ما يلي حسب ما جاء بكتاب الأمانة العامة لمجلس الوزراء رقم 344-3679 
+							المؤرخ <u>(missing date)</u> (مرفق صورة من الكتاب المذكور) :
+							<br>- استلام متطلبات المشروع معتمدة من قبل الجهة المستفيدة.
+							<br>- إعداد كراسة طلب المشروع.
+							<br>- الحصول على موافقة وزارة  المالية على اعتماد ميزانية المشروع.
+							<br>- <a href="#">شهادة خلو الموقع من العوائق.</a>
+							</p><div class="download"><a href="#" class="enabled" data-toggle="tooltip" data-placement="right" title="Download"><i class="fa fa-download"></i></a></div></li>
+							<li class="list_highlight"><div class="number">6</div><p>على مهندس المشروع الالتزام في المراحل التالية بما جاء في القرار الاداري رقم 2013/1257 (كتاب رقم 1278/193/3/6 المؤرخ 23 مايو 2013 ) مرفق صورة من الكتاب المذكور.
+							</p><div class="download"><a href="#" class="enabled" data-toggle="tooltip" data-placement="right" title="Download"><i class="fa fa-download"></i></a></div></li>
+							<li><div class="number">4</div><p>إعداد مستند الشروط المرجعية.(حسب نوع المشروع و على مهندس المشروع الرجوع لمدير الإدارة للاستشارة بهذا الخصوص).</p><div class="download"><a href="#" class="enabled" data-toggle="tooltip" data-placement="right" title="Download"><i class="fa fa-download"></i></a></div></li>
+ 							<li class="list_highlight"><div class="number">5</div><p>إعداد نموذج طلب رقم اتفاقية.
+							</p><div class="download"><a href="#" class="enabled" data-toggle="tooltip" data-placement="right" title="Download"><i class="fa fa-download"></i></a></div></li>
+			 				<li><div class="number">7</div><p>إعداد نموذج طلب اعتماد اتفاقية.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+			 				<li class="list_highlight"><div class="number">8</div><p>مخاطبة قطاع الرقابة و التدقيق – إدارة الوثائق و العقود و إرفاق المستندات المطلوبة.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+			 				<li><div class="number">9</div><p>دعوة المكاتب الاستشارية.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+			 				<li class="list_highlight"><div class="number">10</div><p>تشكيل لجنة لدراسة العروض الفنية و المالية المقدمة من قبل المكاتب الاستشارية.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+			 				<li><div class="number">11</div><p>تقييم العروض الفنية و من ثم العروض المالية المقدمة من قبل المكاتب الاستشارية.
+							</p><div class="download"><a href="#" class="enabled" data-toggle="tooltip" data-placement="right" title="Download"><i class="fa fa-download"></i></a></div></li>
+			 				<li class="list_highlight"><div class="number">12</div><p>إعداد كل من التقرير النهائي للنتائج و كتاب التوصية بالترسية على المكتب الفائز و من ثم إعلان النتائج و إصدار كتاب الترسية المبدئية للمكتب الفائز.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li><div class="number">13</div><p>إعداد مسودة اتفاقية المشروع.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li class="list_highlight"><div class="number">14</div><p>مخاطبة الفتوى و التشريع لأخذ الموافقة اللازمة.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li><div class="number">15</div><p>مخاطبة ديوان المحاسبة  لأخذ الموافقة اللازمة.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li class="list_highlight"><div class="number">16</div><p>توقيع الاتفاقية.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li><div class="number">17</div><p>عقد اجتماع تمهيدي (Kick off Meeting ) مع المكتب الاستشاري و الجهة المستفيدة لتحديد يوم المباشرة بأعمال الاتفاقية (مرفق صورة من أجندة الاجتماع).
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+							<li class="list_highlight"><div class="number">18</div><p>إصدار كتاب أمر المباشرة بأعمال الاتفاقية للمكتب الاستشاري.
+							</p><div class="download"><a href="#" class="disabled"><i class="fa fa-download"></i></a></div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
