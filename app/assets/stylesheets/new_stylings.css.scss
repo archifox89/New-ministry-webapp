@@ -9,24 +9,26 @@ body {
 }
 
 .button_active {
-	padding: 0.5rem 1.4rem 0.5rem 1.4rem;
+	padding: 0.6rem 1.4rem 0.6rem 1.4rem;
 	background-color: #5bb0ee;
 	border-radius: 2rem;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #5bb0ee;
 	color: white !important;
+	min-width: 150px;
 }
 
 .button_border {
-	padding: 0.5rem 1.4rem 0.5rem 1.4rem;
-	border-color: #5bb0ee;
+	padding: 0.6rem 1.4rem 0.6rem 1.4rem;
+	border-color: rgb(179, 180, 180);
 	border-radius: 2rem;
-	border-style: dotted;
-	border-width: 2px;
+	border-style: solid;
+	border-width: 1px;
+	width: 150px;
 	transition: background .2s ease-in-out;
 	&:hover {
-		background: lighten(#eef1f7, 2%);
+		background: #ffffcc;
 	}
 }
 
@@ -57,7 +59,6 @@ body {
 .checkbox input[type="checkbox"] {
 	margin-left: 0px;
 }
-
 
 // Project Documents Styling
 
@@ -198,9 +199,9 @@ body {
 				}
 			}
 			.heading {
-				float: right;
+				float: left;
 				background-color: #eef1f7;
-				width: 100%;
+				width: 86%;
 				height: 120px;
 				.top_heading {
 					border-bottom-width: 1px;
@@ -210,14 +211,22 @@ body {
 					h1 {
 						margin: 0;
 						float: left;
-						width: 100%;
-						margin-left: 2.2rem;
+						// width: 100%;
+						margin-left: 3rem;
 						font-family: 'Lato', sans-serif;
 						color: #687189;
 						font-size: 2.2rem;
 						position: relative;
 						top: 50%;
 						transform: translateY(-50%);
+					}
+					.arabic {
+						float: right;
+						direction: rtl;
+						text-align: right;
+						margin-right: 3rem;
+						font-size: 2rem;
+						font-family: 'Droid Arabic Kufi', serif;
 					}
 				}
 				.sub_navbar {
@@ -233,7 +242,7 @@ body {
 						width: 100%;
 						float: left;
 						ul {
-							margin: 0 0 0 2rem;
+							margin: 0 0 0 3rem;
 							padding: 0;
 							list-style: none;
 							position: relative;
@@ -251,7 +260,7 @@ body {
 									text-decoration: none;
 								}
 								i {
-									color: darken(#8c97b2, 7.5%);
+									color: rgb(179, 180, 180);
 									font-size: 1.1rem;
 								}
 							}
@@ -278,7 +287,6 @@ body {
 			float: left;
 			margin-top: 180px;
 			.main_content {
-				
 				padding: 3rem;
 				.content_container {
 					background-color: white;
@@ -290,6 +298,9 @@ body {
 						border-top-right-radius: 0.4rem;
 						padding-left: 1.8rem;
 						background-color: #eef1f7;
+						width: 100%;
+						display: inline-block;
+						float: left;
 						h2 {
 							font-family: 'Lato', sans-serif;
 							color: #687189;
@@ -298,6 +309,15 @@ body {
 							margin: 0;
 							padding: 2.3rem 0;
 							letter-spacing: 0.5px;
+							float: left;
+						}
+						.arabic {
+							float: right;
+							direction: rtl;
+							text-align: right;
+							margin-right: 2.3rem;
+							font-size: 1.8rem;
+							font-family: 'Droid Arabic Kufi', serif;
 						}
 					}
 					.content_info {
@@ -310,7 +330,7 @@ body {
 								direction: rtl;
 								text-align: right;
 								margin: 0;
-								font-size: 1.8rem;
+								font-size: 1.5rem;
 								color: #6B6E6B;
 								font-weight: 400;
 								border-bottom-style: solid;
@@ -320,12 +340,13 @@ body {
 								display: table;
 								height: 100%;
 								width: 100%;
+								font-family: 'Droid Arabic Kufi', serif;
 							 	.number {
 							 		display: table-cell;
 							 		// padding: 1rem;
 							 		min-width: 50px;
 							 		text-align: center;
-							 		background-color: #ffffe6;
+							 		background-color: #ffffcc;
 									border-left-style: solid;
 									border-left-width: 1px;
 									border-left-color: #dadfea;
