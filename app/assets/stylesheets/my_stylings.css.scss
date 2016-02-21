@@ -3,8 +3,15 @@
 // $nav-tabs-active-link-hover-bg: #F6F6F6;
 
 
+// @font-face {
+//   font-family: 'Droid Arabic Kufi', sans-serif;
+//   src: font-url('DroidKufi-Regular.ttf') format('truetype'); 
+//   src: font-url('DroidKufi-Bold.ttf') format('truetype'); 
+// 	font-weight: normal;
+//   font-style: normal;
+// }
 
-@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import "font-awesome-sprockets";

@@ -20,3 +20,12 @@
  *= require rails_bootstrap_forms
  *= require font-awesome
  */
+
+
+@font-face {
+  font-family: 'Droid Arabic Kufi', sans-serif;
+  src: font_url('DroidKufi-Regular.ttf') format('truetype'); 
+  src: font_url('DroidKufi-Bold.ttf') format('truetype'); 
+	font-weight: normal;
+  font-style: normal;
+}
